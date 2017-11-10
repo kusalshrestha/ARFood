@@ -57,6 +57,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     let config = ARWorldTrackingConfiguration()
     config.planeDetection = .horizontal
     config.worldAlignment = .gravityAndHeading
+    config.isLightEstimationEnabled = true
     ARsceneView.session.run(config, options: [])
     
     // Fadeoff StarrerBlurView
@@ -176,6 +177,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     }
   }
   
+  func addSpotLightOnNode(node: SCNNode) {
+    let light = SCNLight()
+    light.castsShadow = true
+    light.type = .omni
+    let lightNode = SCNNode()
+    lightNode.light = light
+    lightNode.position = SCNVector3(x: 0, y: 5, z: 0)
+    node.addChildNode(lightNode)
+  }
+  
   // MARK: - Update focus square
   func updateFocusSquare() {
     let isObjectVisible = true
@@ -220,17 +231,17 @@ extension ViewController {
   
   func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
     guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-    guard let carScene = SCNScene(named: "Food.scnassets/InstantNoodles/model.dae") else { return }
+    guard let carScene = SCNScene(named: "Food.scnassets/Cocacola/model.dae") else { return }
     guard let carNode = carScene.rootNode.childNode(withName: "SketchUp", recursively: false) else { return }
 //    guard let platformNode = carScene.rootNode.childNode(withName: "platform", recursively: false) else { return }
     let modelNode = SCNNode()
     modelNode.addChildNode(carNode)
 //    modelNode.addChildNode(platformNode)
-//    modelNode.scale = SCNVector3(x: 0.00005, y: 0.00005, z: 0.00005)
+    modelNode.scale = SCNVector3(x: 0.02, y: 0.02, z: 0.02)
     modelNode.simdPosition = float3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
 //    modelNode.eulerAngles = SCNVector3Make(Float(Double.pi / 2), 0, 0)
     node.addChildNode(modelNode)
-//    rotateModel(node: modelNode)
+    rotateModel(node: modelNode)
   }
   
 }
