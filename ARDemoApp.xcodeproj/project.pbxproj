@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940254EB1FAB1A7900402B7E /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940254E91FAB1A7900402B7E /* FocusSquare.swift */; };
+		940254EC1FAB1A7900402B7E /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940254EA1FAB1A7900402B7E /* FocusSquareSegment.swift */; };
+		940254EF1FAB1B2C00402B7E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940254EE1FAB1B2C00402B7E /* Utilities.swift */; };
+		940254F11FAB317600402B7E /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940254F01FAB317600402B7E /* VirtualObjectARView.swift */; };
+		940254F31FAB3F0400402B7E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940254F21FAB3F0400402B7E /* UIView+Extension.swift */; };
+		941F163C1FB40DA2008D8A85 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F163B1FB40DA2008D8A85 /* VirtualObject.swift */; };
+		94250ED31FB55EDC0068FEFB /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94250ED21FB55EDC0068FEFB /* Axis.swift */; };
 		9480AD471F974D750019492F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9480AD461F974D750019492F /* AppDelegate.swift */; };
 		9480AD491F974D750019492F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9480AD481F974D750019492F /* ViewController.swift */; };
 		9480AD4C1F974D750019492F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9480AD4A1F974D750019492F /* Main.storyboard */; };
@@ -14,6 +21,36 @@
 		9480AD511F974D750019492F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9480AD4F1F974D750019492F /* LaunchScreen.storyboard */; };
 		9480AD5C1F974D750019492F /* ARDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9480AD5B1F974D750019492F /* ARDemoAppTests.swift */; };
 		9480AD671F974D750019492F /* ARDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9480AD661F974D750019492F /* ARDemoAppUITests.swift */; };
+		948F2C8B1FB351A7003550B1 /* Food.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 948F2C8A1FB351A7003550B1 /* Food.scnassets */; };
+		948F2C8D1FB3615E003550B1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F2C8C1FB3615E003550B1 /* MenuViewController.swift */; };
+		948F2C8F1FB36736003550B1 /* AnimationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F2C8E1FB36736003550B1 /* AnimationUtil.swift */; };
+		94F44FB31FB448A700653705 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F44FB21FB448A700653705 /* NewViewController.swift */; };
+		94F44FD01FB4B95600653705 /* Giapponese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB71FB4B95200653705 /* Giapponese.jpg */; };
+		94F44FD11FB4B95600653705 /* Soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB81FB4B95300653705 /* Soup.jpg */; };
+		94F44FD21FB4B95600653705 /* PotatoChips.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB91FB4B95300653705 /* PotatoChips.jpg */; };
+		94F44FD31FB4B95600653705 /* Lemonade.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FBA1FB4B95300653705 /* Lemonade.jpeg */; };
+		94F44FD41FB4B95600653705 /* Sucos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FBB1FB4B95300653705 /* Sucos.jpg */; };
+		94F44FD51FB4B95600653705 /* WeddingCake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FBC1FB4B95300653705 /* WeddingCake.jpg */; };
+		94F44FD61FB4B95600653705 /* Burger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FBD1FB4B95300653705 /* Burger.jpg */; };
+		94F44FD71FB4B95600653705 /* OskarBlues.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FBE1FB4B95300653705 /* OskarBlues.jpg */; };
+		94F44FD81FB4B95600653705 /* BlackForestCake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FBF1FB4B95300653705 /* BlackForestCake.jpg */; };
+		94F44FD91FB4B95600653705 /* Cocacola.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC01FB4B95400653705 /* Cocacola.jpg */; };
+		94F44FDA1FB4B95600653705 /* BurgerFries.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC11FB4B95400653705 /* BurgerFries.jpg */; };
+		94F44FDB1FB4B95600653705 /* Noodles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC21FB4B95400653705 /* Noodles.jpg */; };
+		94F44FDC1FB4B95600653705 /* Clicquot.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC31FB4B95400653705 /* Clicquot.jpg */; };
+		94F44FDD1FB4B95600653705 /* InstantNoodles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC41FB4B95400653705 /* InstantNoodles.jpg */; };
+		94F44FDE1FB4B95600653705 /* Bierfles.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC51FB4B95400653705 /* Bierfles.jpeg */; };
+		94F44FDF1FB4B95600653705 /* FastFood.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC61FB4B95500653705 /* FastFood.jpg */; };
+		94F44FE01FB4B95600653705 /* JackDaniels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC71FB4B95500653705 /* JackDaniels.jpg */; };
+		94F44FE11FB4B95600653705 /* CakePiece.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC81FB4B95500653705 /* CakePiece.jpg */; };
+		94F44FE21FB4B95600653705 /* ChocolateCake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FC91FB4B95500653705 /* ChocolateCake.jpg */; };
+		94F44FE31FB4B95600653705 /* BirthdayCake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCA1FB4B95500653705 /* BirthdayCake.jpg */; };
+		94F44FE41FB4B95600653705 /* BreakFast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCB1FB4B95500653705 /* BreakFast.jpg */; };
+		94F44FE51FB4B95600653705 /* FranksBeansDinner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCC1FB4B95500653705 /* FranksBeansDinner.jpg */; };
+		94F44FE61FB4B95600653705 /* PepperoniPizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCD1FB4B95600653705 /* PepperoniPizza.jpg */; };
+		94F44FE71FB4B95600653705 /* HotDog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCE1FB4B95600653705 /* HotDog.jpg */; };
+		94F44FE81FB4B95600653705 /* ChineseInstantNoodles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCF1FB4B95600653705 /* ChineseInstantNoodles.jpg */; };
+		94FDA97A1F9ED28A008160CE /* Cars.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FDA9791F9ED28A008160CE /* Cars.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +71,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940254E91FAB1A7900402B7E /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		940254EA1FAB1A7900402B7E /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		940254EE1FAB1B2C00402B7E /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		940254F01FAB317600402B7E /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
+		940254F21FAB3F0400402B7E /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		941F163B1FB40DA2008D8A85 /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		94250ED21FB55EDC0068FEFB /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
 		9480AD431F974D750019492F /* ARDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9480AD461F974D750019492F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9480AD481F974D750019492F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +91,36 @@
 		9480AD621F974D750019492F /* ARDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9480AD661F974D750019492F /* ARDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDemoAppUITests.swift; sourceTree = "<group>"; };
 		9480AD681F974D750019492F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		948F2C8A1FB351A7003550B1 /* Food.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Food.scnassets; sourceTree = "<group>"; };
+		948F2C8C1FB3615E003550B1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		948F2C8E1FB36736003550B1 /* AnimationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtil.swift; sourceTree = "<group>"; };
+		94F44FB21FB448A700653705 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		94F44FB71FB4B95200653705 /* Giapponese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Giapponese.jpg; sourceTree = "<group>"; };
+		94F44FB81FB4B95300653705 /* Soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Soup.jpg; sourceTree = "<group>"; };
+		94F44FB91FB4B95300653705 /* PotatoChips.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PotatoChips.jpg; sourceTree = "<group>"; };
+		94F44FBA1FB4B95300653705 /* Lemonade.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lemonade.jpeg; sourceTree = "<group>"; };
+		94F44FBB1FB4B95300653705 /* Sucos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sucos.jpg; sourceTree = "<group>"; };
+		94F44FBC1FB4B95300653705 /* WeddingCake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WeddingCake.jpg; sourceTree = "<group>"; };
+		94F44FBD1FB4B95300653705 /* Burger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burger.jpg; sourceTree = "<group>"; };
+		94F44FBE1FB4B95300653705 /* OskarBlues.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = OskarBlues.jpg; sourceTree = "<group>"; };
+		94F44FBF1FB4B95300653705 /* BlackForestCake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BlackForestCake.jpg; sourceTree = "<group>"; };
+		94F44FC01FB4B95400653705 /* Cocacola.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cocacola.jpg; sourceTree = "<group>"; };
+		94F44FC11FB4B95400653705 /* BurgerFries.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BurgerFries.jpg; sourceTree = "<group>"; };
+		94F44FC21FB4B95400653705 /* Noodles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Noodles.jpg; sourceTree = "<group>"; };
+		94F44FC31FB4B95400653705 /* Clicquot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Clicquot.jpg; sourceTree = "<group>"; };
+		94F44FC41FB4B95400653705 /* InstantNoodles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = InstantNoodles.jpg; sourceTree = "<group>"; };
+		94F44FC51FB4B95400653705 /* Bierfles.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bierfles.jpeg; sourceTree = "<group>"; };
+		94F44FC61FB4B95500653705 /* FastFood.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FastFood.jpg; sourceTree = "<group>"; };
+		94F44FC71FB4B95500653705 /* JackDaniels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JackDaniels.jpg; sourceTree = "<group>"; };
+		94F44FC81FB4B95500653705 /* CakePiece.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CakePiece.jpg; sourceTree = "<group>"; };
+		94F44FC91FB4B95500653705 /* ChocolateCake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChocolateCake.jpg; sourceTree = "<group>"; };
+		94F44FCA1FB4B95500653705 /* BirthdayCake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BirthdayCake.jpg; sourceTree = "<group>"; };
+		94F44FCB1FB4B95500653705 /* BreakFast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BreakFast.jpg; sourceTree = "<group>"; };
+		94F44FCC1FB4B95500653705 /* FranksBeansDinner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FranksBeansDinner.jpg; sourceTree = "<group>"; };
+		94F44FCD1FB4B95600653705 /* PepperoniPizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PepperoniPizza.jpg; sourceTree = "<group>"; };
+		94F44FCE1FB4B95600653705 /* HotDog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HotDog.jpg; sourceTree = "<group>"; };
+		94F44FCF1FB4B95600653705 /* ChineseInstantNoodles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChineseInstantNoodles.jpg; sourceTree = "<group>"; };
+		94FDA9791F9ED28A008160CE /* Cars.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Cars.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +148,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940254E81FAB1A6A00402B7E /* Focus Square */ = {
+			isa = PBXGroup;
+			children = (
+				940254E91FAB1A7900402B7E /* FocusSquare.swift */,
+				940254EA1FAB1A7900402B7E /* FocusSquareSegment.swift */,
+			);
+			path = "Focus Square";
+			sourceTree = "<group>";
+		};
+		940254ED1FAB1B2300402B7E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				940254EE1FAB1B2C00402B7E /* Utilities.swift */,
+				948F2C8E1FB36736003550B1 /* AnimationUtil.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		9480AD3A1F974D750019492F = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +191,21 @@
 			children = (
 				9480AD461F974D750019492F /* AppDelegate.swift */,
 				9480AD481F974D750019492F /* ViewController.swift */,
+				94F44FB21FB448A700653705 /* NewViewController.swift */,
+				948F2C8C1FB3615E003550B1 /* MenuViewController.swift */,
+				941F163B1FB40DA2008D8A85 /* VirtualObject.swift */,
+				94250ED21FB55EDC0068FEFB /* Axis.swift */,
+				940254F21FAB3F0400402B7E /* UIView+Extension.swift */,
+				940254F01FAB317600402B7E /* VirtualObjectARView.swift */,
 				9480AD4A1F974D750019492F /* Main.storyboard */,
+				940254ED1FAB1B2300402B7E /* Utilities */,
+				940254E81FAB1A6A00402B7E /* Focus Square */,
+				94F44FB61FB4B92C00653705 /* Images */,
 				9480AD4D1F974D750019492F /* Assets.xcassets */,
+				94FDA9791F9ED28A008160CE /* Cars.scnassets */,
 				9480AD4F1F974D750019492F /* LaunchScreen.storyboard */,
 				9480AD521F974D750019492F /* Info.plist */,
+				948F2C8A1FB351A7003550B1 /* Food.scnassets */,
 			);
 			path = ARDemoApp;
 			sourceTree = "<group>";
@@ -123,6 +226,38 @@
 				9480AD681F974D750019492F /* Info.plist */,
 			);
 			path = ARDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		94F44FB61FB4B92C00653705 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				94F44FC51FB4B95400653705 /* Bierfles.jpeg */,
+				94F44FCA1FB4B95500653705 /* BirthdayCake.jpg */,
+				94F44FBF1FB4B95300653705 /* BlackForestCake.jpg */,
+				94F44FCB1FB4B95500653705 /* BreakFast.jpg */,
+				94F44FBD1FB4B95300653705 /* Burger.jpg */,
+				94F44FC11FB4B95400653705 /* BurgerFries.jpg */,
+				94F44FC81FB4B95500653705 /* CakePiece.jpg */,
+				94F44FCF1FB4B95600653705 /* ChineseInstantNoodles.jpg */,
+				94F44FC91FB4B95500653705 /* ChocolateCake.jpg */,
+				94F44FC31FB4B95400653705 /* Clicquot.jpg */,
+				94F44FC01FB4B95400653705 /* Cocacola.jpg */,
+				94F44FC61FB4B95500653705 /* FastFood.jpg */,
+				94F44FCC1FB4B95500653705 /* FranksBeansDinner.jpg */,
+				94F44FB71FB4B95200653705 /* Giapponese.jpg */,
+				94F44FCE1FB4B95600653705 /* HotDog.jpg */,
+				94F44FC41FB4B95400653705 /* InstantNoodles.jpg */,
+				94F44FC71FB4B95500653705 /* JackDaniels.jpg */,
+				94F44FBA1FB4B95300653705 /* Lemonade.jpeg */,
+				94F44FC21FB4B95400653705 /* Noodles.jpg */,
+				94F44FBE1FB4B95300653705 /* OskarBlues.jpg */,
+				94F44FCD1FB4B95600653705 /* PepperoniPizza.jpg */,
+				94F44FB91FB4B95300653705 /* PotatoChips.jpg */,
+				94F44FB81FB4B95300653705 /* Soup.jpg */,
+				94F44FBB1FB4B95300653705 /* Sucos.jpg */,
+				94F44FBC1FB4B95300653705 /* WeddingCake.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +368,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				9480AD511F974D750019492F /* LaunchScreen.storyboard in Resources */,
+				94F44FD71FB4B95600653705 /* OskarBlues.jpg in Resources */,
+				94F44FDD1FB4B95600653705 /* InstantNoodles.jpg in Resources */,
+				94F44FE71FB4B95600653705 /* HotDog.jpg in Resources */,
+				94F44FD81FB4B95600653705 /* BlackForestCake.jpg in Resources */,
+				94F44FD41FB4B95600653705 /* Sucos.jpg in Resources */,
+				94F44FE31FB4B95600653705 /* BirthdayCake.jpg in Resources */,
+				94F44FE11FB4B95600653705 /* CakePiece.jpg in Resources */,
+				94F44FD51FB4B95600653705 /* WeddingCake.jpg in Resources */,
 				9480AD4E1F974D750019492F /* Assets.xcassets in Resources */,
+				94F44FE61FB4B95600653705 /* PepperoniPizza.jpg in Resources */,
+				94F44FE41FB4B95600653705 /* BreakFast.jpg in Resources */,
+				94F44FD01FB4B95600653705 /* Giapponese.jpg in Resources */,
+				94FDA97A1F9ED28A008160CE /* Cars.scnassets in Resources */,
+				94F44FE01FB4B95600653705 /* JackDaniels.jpg in Resources */,
+				94F44FDE1FB4B95600653705 /* Bierfles.jpeg in Resources */,
+				94F44FD21FB4B95600653705 /* PotatoChips.jpg in Resources */,
 				9480AD4C1F974D750019492F /* Main.storyboard in Resources */,
+				94F44FDF1FB4B95600653705 /* FastFood.jpg in Resources */,
+				94F44FD61FB4B95600653705 /* Burger.jpg in Resources */,
+				94F44FE81FB4B95600653705 /* ChineseInstantNoodles.jpg in Resources */,
+				94F44FD11FB4B95600653705 /* Soup.jpg in Resources */,
+				94F44FD31FB4B95600653705 /* Lemonade.jpeg in Resources */,
+				94F44FDB1FB4B95600653705 /* Noodles.jpg in Resources */,
+				94F44FD91FB4B95600653705 /* Cocacola.jpg in Resources */,
+				94F44FDC1FB4B95600653705 /* Clicquot.jpg in Resources */,
+				94F44FDA1FB4B95600653705 /* BurgerFries.jpg in Resources */,
+				94F44FE21FB4B95600653705 /* ChocolateCake.jpg in Resources */,
+				948F2C8B1FB351A7003550B1 /* Food.scnassets in Resources */,
+				94F44FE51FB4B95600653705 /* FranksBeansDinner.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +421,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941F163C1FB40DA2008D8A85 /* VirtualObject.swift in Sources */,
+				948F2C8F1FB36736003550B1 /* AnimationUtil.swift in Sources */,
+				940254F11FAB317600402B7E /* VirtualObjectARView.swift in Sources */,
+				940254F31FAB3F0400402B7E /* UIView+Extension.swift in Sources */,
 				9480AD491F974D750019492F /* ViewController.swift in Sources */,
+				94F44FB31FB448A700653705 /* NewViewController.swift in Sources */,
+				940254EB1FAB1A7900402B7E /* FocusSquare.swift in Sources */,
 				9480AD471F974D750019492F /* AppDelegate.swift in Sources */,
+				940254EF1FAB1B2C00402B7E /* Utilities.swift in Sources */,
+				940254EC1FAB1A7900402B7E /* FocusSquareSegment.swift in Sources */,
+				94250ED31FB55EDC0068FEFB /* Axis.swift in Sources */,
+				948F2C8D1FB3615E003550B1 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N7DN9W93BF;
 				INFOPLIST_FILE = ARDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leapfrog.ARDemoApp;
@@ -441,6 +614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N7DN9W93BF;
 				INFOPLIST_FILE = ARDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leapfrog.ARDemoApp;
