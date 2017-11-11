@@ -22,4 +22,8 @@ class CollectionViewVM: NSObject {
     return models
   }
   
+//  func getImageForIndexPath(indexPath: IndexPath) -> UIImage {
+//    
+//  }
+  
 }

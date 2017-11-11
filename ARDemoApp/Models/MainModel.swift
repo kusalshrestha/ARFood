@@ -10,6 +10,23 @@ import Foundation
 
 enum Category {
   case drinks, cake, breakfast, noodlesSoup, fastfood, other
+  
+  func getTitle() -> String {
+    switch self {
+    case .drinks:
+      return "Featured Drinks"
+    case .cake:
+      return "Cakes"
+    case .breakfast:
+      return "Breakfast"
+    case .noodlesSoup:
+      return "Noodles & Soups"
+    case .fastfood:
+      return "Fastfood"
+    case .other:
+      return "Others"
+    }
+  }
 }
 
 enum ArtificialModel {

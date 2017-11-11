@@ -11,9 +11,13 @@ import UIKit
 class ModelCollectionViewCell: UICollectionViewCell {
     
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var priceLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
+    
+    layer.cornerRadius = 8
+    imageView.layer.cornerRadius = 8
   }
   
 }

@@ -16,7 +16,8 @@ class VirtualObject {
   var displayName: String!
   var modelNode: SCNNode!
   var icon: String!
-  var image: String!
+  var image: UIImage!
+  var price: String!
   
   init(model: ArtificialModel) {
     self.model = model
@@ -33,122 +34,146 @@ class VirtualObject {
       displayName = "Aarquiteta"
       category = .drinks
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Lemonade.jpeg")
+      price = "$ 9.9"
     case .bierfles:
       displayName = "Bierfles"
       category = .drinks
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Bierfles.jpeg")
+      price = "$ 9.9"
     case .birthdayCake:
       displayName = "Birthday Cake"
       category = .cake
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "BirthdayCake.jpg")
+      price = "$ 9.9"
     case .breakfast:
       displayName = "Breakfast"
       category = .breakfast
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "BreakFast.jpg")
+      price = "$ 9.9"
     case .blackforest:
       displayName = "Black Forest"
       category = .cake
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "BlackForestCake.jpg")
+      price = "$ 9.9"
     case .burger:
       displayName = "Burger"
       category = .fastfood
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Burger.jpg")
+      price = "$ 9.9"
     case .burgerFries:
       displayName = "Burger & Fries"
       category = .fastfood
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "BurgerFries.jpg")
+      price = "$ 9.9"
     case .cakePiece:
       displayName = "Cake Piece"
       category = .cake
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "CakePiece.jpg")
+      price = "$ 9.9"
     case .chineseNoodles:
       displayName = "Haka Noodles"
       category = .noodlesSoup
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "InstantNoodles.jpg")
+      price = "$ 9.9"
     case .chocolateCake:
       displayName = "Chocolate Cake"
       category = .cake
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "ChocolateCake.jpg")
+      price = "$ 9.9"
     case .clicquot:
       displayName = "Clicquot"
       category = .drinks
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Clicquot.jpg")
+      price = "$ 9.9"
     case .cocacola:
       displayName = "Cocacola"
       category = .drinks
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Cocacola.jpg")
+      price = "$ 9.9"
     case .fastFood:
       displayName = "Fast Food"
       category = .fastfood
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "FastFood.jpg")
+      price = "$ 9.9"
     case .franksBeansDinner:
       displayName = "Franks Beans Dinner"
       category = .other
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "FranksBeansDinner.jpg")
+      price = "$ 9.9"
     case .giapponese:
       displayName = "Giapponese"
       category = .noodlesSoup
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Giapponese.jpg")
+      price = "$ 9.9"
     case .instantNodoles:
       displayName = "Noodles"
       category = .noodlesSoup
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Noodles.jpg")
+      price = "$ 9.9"
     case .jackDaniels:
       displayName = "Jack Daniels"
       category = .drinks
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "JackDaniels.jpg")
+      price = "$ 9.9"
     case .oskarBluesBeer:
       displayName = "Oskar Blues Beer"
       category = .drinks
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "OskarBlues.jpg")
+      price = "$ 9.9"
     case .pepperoniPizza:
       displayName = "Pepperoni Pizza"
       category = .fastfood
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "PepperoniPizza.jpg")
+      price = "$ 9.9"
     case .potatoChips:
       displayName = "Potato Chips"
       category = .fastfood
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "PotatoChips.jpg")
+      price = "$ 9.9"
     case .senzaTitolo:
       displayName = "Senza Titolo"
       category = .fastfood
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "HotDog.jpg")
+      price = "$ 9.9"
     case .soup:
       displayName = "Soup"
       category = .noodlesSoup
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Soup.jpg")
+      price = "$ 9.9"
     case .sucos:
       displayName = "Sucos"
       category = .noodlesSoup
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "Sucos.jpg")
+      price = "$ 9.9"
     case .weddingCake:
       displayName = "Wedding Cake"
       category = .cake
       icon = ""
-      image = ""
+      image = #imageLiteral(resourceName: "WeddingCake.jpg")
+      price = "$ 9.9"
     case .none:
       break
     case .some(_):
