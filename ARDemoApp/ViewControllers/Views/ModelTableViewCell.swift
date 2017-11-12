@@ -46,13 +46,12 @@ extension ModelTableViewCell: UICollectionViewDataSource {
     let model = collectionViewVM.getModelsForIndexPath(indexpath: indexPathOfTableView!)[indexPath.row]
     cell.imageView.image = model.image
     cell.priceLabel.text = model.price
+    let row = indexPathOfTableView?.row
+    collectionView.isPagingEnabled = row == 0 ? true : false
     return cell
   }
   
 }
-
-var contentOffsetXWhileDragBegin: CGFloat = 0
-var currentIndexPath: IndexPath?
 
 extension ModelTableViewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
   
@@ -62,11 +61,13 @@ extension ModelTableViewCell: UICollectionViewDelegate, UICollectionViewDelegate
     }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-    return CGSize(width: 20, height: 200)
+    let row = indexPathOfTableView?.row
+    return row == 0 ? CGSize(width: 20, height: 200) : CGSize.zero
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-    return CGSize(width: 20, height: 200)
+    let row = indexPathOfTableView?.row
+    return row == 0 ? CGSize(width: 20, height: 200) : CGSize.zero
   }
   
   func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -83,45 +84,13 @@ extension ModelTableViewCell: UICollectionViewDelegate, UICollectionViewDelegate
     return reusableView
   }
   
-  //case for scroll
-  func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-    let contentOffSetXOnDeccelerate = scrollView.contentOffset.x
-    if let indexPath = currentIndexPath {
-      if (contentOffSetXOnDeccelerate - contentOffsetXWhileDragBegin) > 0 {
-        print("left")
-        if indexPath.row < (collectionView.numberOfItems(inSection: 0) - 1) {
-          let newRow = indexPath.row + 1
-          let indexPath = IndexPath(item: newRow, section: 0)
-          collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }
-      } else {
-        print("right")
-        if indexPath.row > 0 {
-          let newRow = indexPath.row - 1
-          let indexPath = IndexPath(item: newRow, section: 0)
-          collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }
-      }
-//      let row = Int(scrollView.contentOffset.x / cellWidth)
-//      let indexPath = IndexPath(item: newRow, section: 0)
-//      collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
-  }
-  
-  // Case for drag
-  
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-    contentOffsetXWhileDragBegin = scrollView.contentOffset.x
-    currentIndexPath = collectionView.indexPathForItem(at: CGPoint(x: collectionView.bounds.width / 2 + collectionView.contentOffset.x, y: 50))
+    collectionView.scrollViewWillBeginDragging(scrollView)
   }
-  
-//  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-////    let contentOffsetOnEndDrag = scrollView.contentOffset.x
-//
-//    let row = Int(scrollView.contentOffset.x / cellWidth)
-//    let indexPath = IndexPath(item: row, section: 0)
-//    collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-//  }
+
+  func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+    collectionView.scrollViewWillBeginDecelerating(scrollView)
+  }
   
 }
 

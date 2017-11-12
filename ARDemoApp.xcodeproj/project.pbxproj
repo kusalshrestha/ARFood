@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		940254EF1FAB1B2C00402B7E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940254EE1FAB1B2C00402B7E /* Utilities.swift */; };
+		940A52BA1FB8AE25002272D6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */; };
 		940A74131FB6CFD5009D99B6 /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A740D1FB6CFD4009D99B6 /* VirtualObjectARView.swift */; };
 		940A74141FB6CFD5009D99B6 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A740E1FB6CFD4009D99B6 /* Axis.swift */; };
 		940A74161FB6CFD5009D99B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74101FB6CFD5009D99B6 /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		940254EE1FAB1B2C00402B7E /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		940A740D1FB6CFD4009D99B6 /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
 		940A740E1FB6CFD4009D99B6 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
 		940A74101FB6CFD5009D99B6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		940A741A1FB6D089009D99B6 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */,
 				940A742C1FB6D146009D99B6 /* UIView+Extension.swift */,
 			);
 			path = Categories;
@@ -480,6 +483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940A52BA1FB8AE25002272D6 /* UICollectionView+Extension.swift in Sources */,
 				948F2C8F1FB36736003550B1 /* AnimationUtil.swift in Sources */,
 				940A74331FB6D1AD009D99B6 /* FocusSquare.swift in Sources */,
 				940A74381FB6D1E3009D99B6 /* ModelCollectionViewCell.swift in Sources */,
