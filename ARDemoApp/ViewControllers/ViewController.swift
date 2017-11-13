@@ -13,8 +13,10 @@ import Photos
 
 class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   
-  @IBOutlet var menuViewModel: NSObject!
-  
+  @IBOutlet weak var whiteBackGroundView: UIView!
+  @IBOutlet weak var logoImageView: UIImageView!
+
+  @IBOutlet var mainVCVM: MainViewControllerVM!
   @IBOutlet weak var ARsceneView: VirtualObjectARView!
   @IBOutlet weak var ARStatusLabel: UILabel!
   @IBOutlet weak var ARInfoView: UIVisualEffectView!
@@ -37,55 +39,56 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    setupScene()
+    mainVCVM.configureScene(ARSceneView: ARsceneView, delegate: self)
   }
-  
-  func setupScene() {
-    ARsceneView.delegate = self
-    ARsceneView.session.delegate = self
-//    ARsceneView.showsStatistics = true
-    ARsceneView.automaticallyUpdatesLighting = true
-    ARsceneView.antialiasingMode = .multisampling4X
-    UIApplication.shared.isStatusBarHidden = true
-    UIApplication.shared.isIdleTimerDisabled = true
     
-    ARsceneView.scene.rootNode.addChildNode(focusSquare)
-  }
-  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    if !ARWorldTrackingConfiguration.isSupported { return }
-    let config = ARWorldTrackingConfiguration()
-    config.planeDetection = .horizontal
-    config.worldAlignment = .gravityAndHeading
-    config.isLightEstimationEnabled = true
-    ARsceneView.session.run(config, options: [])
-    
-    // Fadeoff StarrerBlurView
-    UIView.animate(withDuration: 0.25) {
-      self.starrerBlurView.effect = nil
+    //Animation logo Animation
+    UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseInOut, animations: {
+      self.logoImageView.alpha = 1
+    }) { (completed) in
+      UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseInOut, animations: {
+        self.logoImageView.alpha = 0
+      }, completion: { (completed) in
+        UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseInOut, animations: {
+          self.whiteBackGroundView.alpha = 0
+        }, completion: { (completed) in
+          self.whiteBackGroundView.removeFromSuperview()
+        })
+      })
     }
     
-    let sphereGeometry = SCNSphere(radius: 10)
-    let node = SCNNode(geometry: sphereGeometry)
-    node.position = SCNVector3(x: 0, y: 0, z: 0)
-    sphereGeometry.firstMaterial?.diffuse.contents = UIColor.red
-    ARsceneView.scene.rootNode.addChildNode(node)
+    showHideBlurOverlay(show: false)
+    mainVCVM.runARSession(ARSceneView: ARsceneView)
+  }
+  
+  func showHideBlurOverlay(show: Bool) {
+    let alphaValue: CGFloat = show ? 1 : 0
+    UIView.animate(withDuration: 1, animations: {
+      self.starrerBlurView.alpha = alphaValue
+    }) { (completed) in
+      //
+    }
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
+    
     guard let menuVC = segue.destination as? MenuViewController else { return }
+    showHideBlurOverlay(show: true)
     menuVC.modelSelection = { model in
       print(model.displayName)
       menuVC.dismiss(animated: true, completion: nil)
+      self.showHideBlurOverlay(show: false)
     }
     
 //    toggleAnimation(ofSide: .bottom, toShow: false, delayBetweenAnimation: 0.1, animatingViews: [reloadButton, addButton, cameraButton])
   }
   
   @IBAction func dismissMenuVC(segue: UIStoryboardSegue) {
+    self.showHideBlurOverlay(show: false)
 //    toggleAnimation(ofSide: .bottom, toShow: true, delayBetweenAnimation: 0.1, animatingViews: [reloadButton, addButton, cameraButton])
   }
   

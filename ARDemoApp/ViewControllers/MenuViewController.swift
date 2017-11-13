@@ -10,8 +10,9 @@ import UIKit
 
 class MenuViewController: UIViewController {
   
+  @IBOutlet var menuTableVM: MenuTableViewVM!
   @IBOutlet weak var tableView: UITableView!
-  let modelTableVM = MenuTableViewVM.sharedInstance
+
   var modelSelection: ((VirtualObject) -> ())?
   
   override func viewDidLoad() {
@@ -31,12 +32,12 @@ class MenuViewController: UIViewController {
 extension MenuViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return modelTableVM.numberOfRows()
+    return menuTableVM.numberOfRows()
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ModelTableViewCell.self), for: indexPath) as! ModelTableViewCell
-    cell.titile.text = modelTableVM.getHeaderTitleForIndexPath(indexpath: indexPath)
+    cell.titile.text = menuTableVM.getHeaderTitleForIndexPath(indexpath: indexPath)
     cell.modelSelection = modelSelection
     return cell
   }

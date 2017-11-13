@@ -11,7 +11,7 @@ import UIKit
 
 class MenuTableViewVM: NSObject {
   
-  static var sharedInstance = MenuTableViewVM()
+//  static var sharedInstance = MenuTableViewVM()
   
   private override init() {
     super.init()
