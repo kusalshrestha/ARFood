@@ -15,9 +15,11 @@ class ModelCollectionViewCell: UICollectionViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    
-    layer.cornerRadius = 8
-    imageView.layer.cornerRadius = 8
+  }
+  
+  func setCornerRadius(isFirstCollectionView: Bool = false) {
+    layer.cornerRadius = isFirstCollectionView ? 8 : 4
+//    imageView.layer.cornerRadius = isFirstCollectionView ? 8 : 4
   }
   
 }

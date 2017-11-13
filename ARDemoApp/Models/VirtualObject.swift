@@ -41,25 +41,25 @@ class VirtualObject {
       category = .drinks
       icon = ""
       image = #imageLiteral(resourceName: "Bierfles.jpeg")
-      price = "$ 9.9"
+      price = "$ 1.9"
     case .birthdayCake:
       displayName = "Birthday Cake"
       category = .cake
       icon = ""
       image = #imageLiteral(resourceName: "BirthdayCake.jpg")
-      price = "$ 9.9"
+      price = "$ 4.9"
     case .breakfast:
       displayName = "Breakfast"
       category = .breakfast
       icon = ""
       image = #imageLiteral(resourceName: "BreakFast.jpg")
-      price = "$ 9.9"
+      price = "$ 2.9"
     case .blackforest:
       displayName = "Black Forest"
       category = .cake
       icon = ""
       image = #imageLiteral(resourceName: "BlackForestCake.jpg")
-      price = "$ 9.9"
+      price = "$ 0.9"
     case .burger:
       displayName = "Burger"
       category = .fastfood
@@ -71,25 +71,25 @@ class VirtualObject {
       category = .fastfood
       icon = ""
       image = #imageLiteral(resourceName: "BurgerFries.jpg")
-      price = "$ 9.9"
+      price = "$ 7.9"
     case .cakePiece:
       displayName = "Cake Piece"
       category = .cake
       icon = ""
       image = #imageLiteral(resourceName: "CakePiece.jpg")
-      price = "$ 9.9"
+      price = "$ 1.9"
     case .chineseNoodles:
       displayName = "Haka Noodles"
       category = .noodlesSoup
       icon = ""
       image = #imageLiteral(resourceName: "InstantNoodles.jpg")
-      price = "$ 9.9"
+      price = "$ 7.9"
     case .chocolateCake:
       displayName = "Chocolate Cake"
       category = .cake
       icon = ""
       image = #imageLiteral(resourceName: "ChocolateCake.jpg")
-      price = "$ 9.9"
+      price = "$ 5.9"
     case .clicquot:
       displayName = "Clicquot"
       category = .drinks
@@ -101,7 +101,7 @@ class VirtualObject {
       category = .drinks
       icon = ""
       image = #imageLiteral(resourceName: "Cocacola.jpg")
-      price = "$ 9.9"
+      price = "$ 0.9"
     case .fastFood:
       displayName = "Fast Food"
       category = .fastfood
@@ -113,31 +113,31 @@ class VirtualObject {
       category = .other
       icon = ""
       image = #imageLiteral(resourceName: "FranksBeansDinner.jpg")
-      price = "$ 9.9"
+      price = "$ 14.9"
     case .giapponese:
       displayName = "Giapponese"
       category = .noodlesSoup
       icon = ""
       image = #imageLiteral(resourceName: "Giapponese.jpg")
-      price = "$ 9.9"
+      price = "$ 3.9"
     case .instantNodoles:
       displayName = "Noodles"
       category = .noodlesSoup
       icon = ""
       image = #imageLiteral(resourceName: "Noodles.jpg")
-      price = "$ 9.9"
+      price = "$ 1.9"
     case .jackDaniels:
       displayName = "Jack Daniels"
       category = .drinks
       icon = ""
       image = #imageLiteral(resourceName: "JackDaniels.jpg")
-      price = "$ 9.9"
+      price = "$ 19.9"
     case .oskarBluesBeer:
       displayName = "Oskar Blues Beer"
       category = .drinks
       icon = ""
       image = #imageLiteral(resourceName: "OskarBlues.jpg")
-      price = "$ 9.9"
+      price = "$ 14.9"
     case .pepperoniPizza:
       displayName = "Pepperoni Pizza"
       category = .fastfood
@@ -149,25 +149,25 @@ class VirtualObject {
       category = .fastfood
       icon = ""
       image = #imageLiteral(resourceName: "PotatoChips.jpg")
-      price = "$ 9.9"
+      price = "$ 2.9"
     case .senzaTitolo:
       displayName = "Senza Titolo"
       category = .fastfood
       icon = ""
       image = #imageLiteral(resourceName: "HotDog.jpg")
-      price = "$ 9.9"
+      price = "$ 4.9"
     case .soup:
       displayName = "Soup"
       category = .noodlesSoup
       icon = ""
       image = #imageLiteral(resourceName: "Soup.jpg")
-      price = "$ 9.9"
+      price = "$ 8.9"
     case .sucos:
       displayName = "Sucos"
       category = .noodlesSoup
       icon = ""
       image = #imageLiteral(resourceName: "Sucos.jpg")
-      price = "$ 9.9"
+      price = "$ 2.9"
     case .weddingCake:
       displayName = "Wedding Cake"
       category = .cake

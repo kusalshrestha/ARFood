@@ -8,14 +8,19 @@
 
 import UIKit
 
+protocol ModelSelectionDelegate: NSObjectProtocol {
+  func modelDidSelect(model: VirtualObject)
+}
+
 class ModelTableViewCell: UITableViewCell {
   
   @IBOutlet weak var titile: UILabel!
   @IBOutlet weak var collectionView: UICollectionView!
   
-  let cellWidth = UIScreen.main.bounds.width * 0.86
+  let cellWidth = UIScreen.main.bounds.width * 0.75
   let collectionViewVM = CollectionViewVM.sharedInstance
   var indexPathOfTableView: IndexPath?
+  weak var delegate: ModelSelectionDelegate?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -30,6 +35,7 @@ class ModelTableViewCell: UITableViewCell {
     collectionView.dataSource = self
     collectionView.delegate = self
     indexPathOfTableView = indexPath
+    collectionView.reloadData()
   }
   
 }
@@ -37,7 +43,7 @@ class ModelTableViewCell: UITableViewCell {
 extension ModelTableViewCell: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    let models = collectionViewVM.getModelsForIndexPath(indexpath: indexPathOfTableView!)//modelTableVM.getAllAvailabelModels().filter { $0.category == .drinks }
+    let models = collectionViewVM.getModelsForIndexPath(indexpath: indexPathOfTableView!)
     return models.count
   }
   
@@ -47,8 +53,15 @@ extension ModelTableViewCell: UICollectionViewDataSource {
     cell.imageView.image = model.image
     cell.priceLabel.text = model.price
     let row = indexPathOfTableView?.row
+    cell.setCornerRadius(isFirstCollectionView: row == 0)
     collectionView.isPagingEnabled = row == 0 ? true : false
     return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    let model = collectionViewVM.getModelsForIndexPath(indexpath: indexPathOfTableView!)[indexPath.row]
+    print(model.displayName)
+    self.delegate?.modelDidSelect(model: model)
   }
   
 }
@@ -57,7 +70,7 @@ extension ModelTableViewCell: UICollectionViewDelegate, UICollectionViewDelegate
   
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
       let row = indexPathOfTableView?.row
-      return row == 0 ? CGSize(width: cellWidth, height: 200) : CGSize(width: 80, height: 120)
+      return row == 0 ? CGSize(width: cellWidth, height: 144) : CGSize(width: cellWidth / 3, height: 100)
     }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -85,12 +98,13 @@ extension ModelTableViewCell: UICollectionViewDelegate, UICollectionViewDelegate
   }
   
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-    collectionView.scrollViewWillBeginDragging(scrollView)
+    let row = indexPathOfTableView?.row
+    if row == 0 { collectionView.scrollViewWillBeginDragging(scrollView) }
   }
 
   func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-    collectionView.scrollViewWillBeginDecelerating(scrollView)
+    let row = indexPathOfTableView?.row
+    if row == 0 { collectionView.scrollViewWillBeginDecelerating(scrollView) }
   }
   
 }
-
