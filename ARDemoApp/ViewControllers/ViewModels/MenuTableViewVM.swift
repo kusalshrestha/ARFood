@@ -26,7 +26,7 @@ class MenuTableViewVM: NSObject {
   }
   
   func getHeaderTitleForIndexPath(indexpath: IndexPath) -> String {
-    return VirtualObject.modelCategoryList()[indexpath.row].getTitle()
+    return VirtualObject.modelCategoryList()[indexpath.row].getTitle().capitalized
   }
   
 }

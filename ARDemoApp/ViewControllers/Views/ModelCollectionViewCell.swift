@@ -18,7 +18,7 @@ class ModelCollectionViewCell: UICollectionViewCell {
   }
   
   func setCornerRadius(isFirstCollectionView: Bool = false) {
-    layer.cornerRadius = isFirstCollectionView ? 8 : 4
+    layer.cornerRadius = isFirstCollectionView ? 8 : 5
 //    imageView.layer.cornerRadius = isFirstCollectionView ? 8 : 4
   }
   

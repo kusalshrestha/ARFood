@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MyanmarSangamMN.ttc">
-            <string>MyanmarSangamMN-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -32,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqf-6v-TPB">
-                                            <rect key="frame" x="167" y="603" width="40" height="48"/>
+                                            <rect key="frame" x="319" y="604" width="40" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="2Kt-xr-cfw"/>
                                                 <constraint firstAttribute="height" constant="48" id="wss-jA-9s5"/>
@@ -52,8 +47,8 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AR Status" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5C6-no-3JS">
                                                         <rect key="frame" x="8" y="8" width="63.5" height="17"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="KZ3-Cn-TiD"/>
-                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="q3r-10-bRF"/>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="KZ3-Cn-TiD"/>
+                                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="60" id="q3r-10-bRF"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <nil key="textColor"/>
@@ -85,7 +80,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </visualEffectView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWU-nU-ZeF" userLabel="Reload">
-                                            <rect key="frame" x="16" y="603" width="40" height="48"/>
+                                            <rect key="frame" x="16" y="604" width="40" height="48"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="Cj5-Nd-uvQ"/>
@@ -101,39 +96,39 @@
                                                 <action selector="reloadTrackingAndVisulization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zW7-49-vmU"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBp-ag-AzH">
+                                            <rect key="frame" x="166" y="606" width="42" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="BHd-q9-m6X"/>
+                                                <constraint firstAttribute="width" constant="42" id="tLz-w6-Lwg"/>
+                                            </constraints>
+                                            <state key="normal" image="shutter"/>
+                                            <connections>
+                                                <action selector="takeScreenshot" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zic-Dx-jkD"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="qBp-ag-AzH" secondAttribute="bottom" constant="19" id="UNw-Pm-eus"/>
                                         <constraint firstItem="AWU-nU-ZeF" firstAttribute="centerY" secondItem="Oqf-6v-TPB" secondAttribute="centerY" id="WYr-ph-r4e"/>
+                                        <constraint firstAttribute="trailing" secondItem="Oqf-6v-TPB" secondAttribute="trailing" constant="16" id="dKf-Ai-qub"/>
+                                        <constraint firstItem="Oqf-6v-TPB" firstAttribute="baseline" secondItem="qBp-ag-AzH" secondAttribute="baseline" constant="4" id="dYR-dj-OzT"/>
                                         <constraint firstItem="AWU-nU-ZeF" firstAttribute="leading" secondItem="VtO-5T-C8o" secondAttribute="leading" constant="16" id="jGT-sg-mjQ"/>
                                         <constraint firstItem="ddY-Es-Ko3" firstAttribute="top" secondItem="VtO-5T-C8o" secondAttribute="top" constant="20" id="sW6-gd-Wa6"/>
                                         <constraint firstItem="ddY-Es-Ko3" firstAttribute="leading" secondItem="VtO-5T-C8o" secondAttribute="leading" constant="8" id="vch-nU-huP"/>
-                                        <constraint firstItem="Oqf-6v-TPB" firstAttribute="centerX" secondItem="VtO-5T-C8o" secondAttribute="centerX" id="yRn-qI-yC6"/>
+                                        <constraint firstItem="qBp-ag-AzH" firstAttribute="centerX" secondItem="VtO-5T-C8o" secondAttribute="centerX" id="x5D-Fa-Ox3"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBp-ag-AzH">
-                                <rect key="frame" x="317" y="605" width="42" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="BHd-q9-m6X"/>
-                                    <constraint firstAttribute="width" constant="42" id="tLz-w6-Lwg"/>
-                                </constraints>
-                                <state key="normal" image="shutter"/>
-                                <connections>
-                                    <action selector="takeScreenshot" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zic-Dx-jkD"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3jI-8A-eXV" firstAttribute="trailing" secondItem="f2J-Ol-h8s" secondAttribute="trailing" id="0Zi-Py-QGU"/>
                             <constraint firstItem="3jI-8A-eXV" firstAttribute="bottom" secondItem="f2J-Ol-h8s" secondAttribute="bottom" id="4k4-zf-ffl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qBp-ag-AzH" secondAttribute="bottom" constant="20" id="Bqh-bF-f1W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f2J-Ol-h8s" secondAttribute="bottom" id="HM8-Mf-eA5"/>
-                            <constraint firstItem="Oqf-6v-TPB" firstAttribute="baseline" secondItem="qBp-ag-AzH" secondAttribute="baseline" constant="4" id="KzE-9E-Wj9"/>
                             <constraint firstItem="3jI-8A-eXV" firstAttribute="top" secondItem="f2J-Ol-h8s" secondAttribute="top" id="XT7-kN-UK9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2J-Ol-h8s" secondAttribute="trailing" id="aDl-MT-5ME"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qBp-ag-AzH" secondAttribute="trailing" constant="16" id="ebM-J9-huO"/>
                             <constraint firstItem="f2J-Ol-h8s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h2Y-iL-dGE"/>
                             <constraint firstItem="f2J-Ol-h8s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j21-cE-p7q"/>
                             <constraint firstItem="3jI-8A-eXV" firstAttribute="leading" secondItem="f2J-Ol-h8s" secondAttribute="leading" id="k0O-Fk-eeO"/>
@@ -282,8 +277,8 @@
                                                             <rect key="frame" x="8" y="0.0" width="359" height="40"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEADER" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb6-od-UGr">
-                                                                    <rect key="frame" x="8" y="16.5" width="63" height="23"/>
-                                                                    <fontDescription key="fontDescription" name="MyanmarSangamMN-Bold" family="Myanmar Sangam MN" pointSize="17"/>
+                                                                    <rect key="frame" x="8" y="18" width="67" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>

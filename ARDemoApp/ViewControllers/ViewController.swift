@@ -76,7 +76,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     super.prepare(for: segue, sender: sender)
-    
+    guard let menuVC = segue.destination as? MenuViewController else { return }
+    menuVC.modelSelection = { model in
+      print(model.displayName)
+      menuVC.dismiss(animated: true, completion: nil)
+    }
     
 //    toggleAnimation(ofSide: .bottom, toShow: false, delayBetweenAnimation: 0.1, animatingViews: [reloadButton, addButton, cameraButton])
   }
@@ -219,7 +223,7 @@ extension ViewController {
     modelNode.addChildNode(carNode)
 //    modelNode.addChildNode(platformNode)
     modelNode.scale = SCNVector3(x: 0.0001, y: 0.0001, z: 0.0001)
-    modelNode.simdPosition = float3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
+//    modelNode.simdPosition = float3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
 //    modelNode.eulerAngles = SCNVector3Make(Float(Double.pi / 2), 0, 0)
     node.addChildNode(modelNode)
     addSpotLightOnNode(rootNode: node)
@@ -246,11 +250,6 @@ extension ViewController {
   }
   
   func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-    DispatchQueue.main.async {
-//      self.virtualObjectInteraction.updateObjectToCurrentTrackingPosition()
-      self.updateFocusSquare()
-    }
-    
     // If light estimation is enabled, update the intensity of the model's lights and the environment map
     let baseIntensity: CGFloat = 40
     let lightingEnvironment = ARsceneView.scene.lightingEnvironment
@@ -261,12 +260,4 @@ extension ViewController {
     }
   }
 
-}
-
-extension ViewController: ModelSelectionDelegate {
-  
-  func modelDidSelect(model: VirtualObject) {
-    
-  }
-  
 }

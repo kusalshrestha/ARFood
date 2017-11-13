@@ -12,6 +12,7 @@ class MenuViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   let modelTableVM = MenuTableViewVM.sharedInstance
+  var modelSelection: ((VirtualObject) -> ())?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -36,6 +37,7 @@ extension MenuViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ModelTableViewCell.self), for: indexPath) as! ModelTableViewCell
     cell.titile.text = modelTableVM.getHeaderTitleForIndexPath(indexpath: indexPath)
+    cell.modelSelection = modelSelection
     return cell
   }
   

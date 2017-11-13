@@ -25,6 +25,7 @@
 		940A743B1FB6D1EA009D99B6 /* MenuTableViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74391FB6D1EA009D99B6 /* MenuTableViewVM.swift */; };
 		940A743C1FB6D1EA009D99B6 /* CollectionViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A743A1FB6D1EA009D99B6 /* CollectionViewVM.swift */; };
 		94250ED51FB590EC0068FEFB /* Places.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 94250ED41FB590EC0068FEFB /* Places.scnassets */; };
+		94677DD71FB9C4FC005689D5 /* SCNNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94677DD61FB9C4FB005689D5 /* SCNNode+Extension.swift */; };
 		9480AD4C1F974D750019492F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9480AD4A1F974D750019492F /* Main.storyboard */; };
 		9480AD4E1F974D750019492F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9480AD4D1F974D750019492F /* Assets.xcassets */; };
 		9480AD511F974D750019492F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9480AD4F1F974D750019492F /* LaunchScreen.storyboard */; };
@@ -96,6 +97,7 @@
 		940A74391FB6D1EA009D99B6 /* MenuTableViewVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewVM.swift; sourceTree = "<group>"; };
 		940A743A1FB6D1EA009D99B6 /* CollectionViewVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewVM.swift; sourceTree = "<group>"; };
 		94250ED41FB590EC0068FEFB /* Places.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Places.scnassets; sourceTree = "<group>"; };
+		94677DD61FB9C4FB005689D5 /* SCNNode+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extension.swift"; sourceTree = "<group>"; };
 		9480AD431F974D750019492F /* ARDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9480AD4B1F974D750019492F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9480AD4D1F974D750019492F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */,
 				940A742C1FB6D146009D99B6 /* UIView+Extension.swift */,
+				94677DD61FB9C4FB005689D5 /* SCNNode+Extension.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				940A74331FB6D1AD009D99B6 /* FocusSquare.swift in Sources */,
 				940A74381FB6D1E3009D99B6 /* ModelCollectionViewCell.swift in Sources */,
 				940A74341FB6D1AD009D99B6 /* FocusSquareSegment.swift in Sources */,
+				94677DD71FB9C4FC005689D5 /* SCNNode+Extension.swift in Sources */,
 				940A742D1FB6D146009D99B6 /* UIView+Extension.swift in Sources */,
 				940A74271FB6D12B009D99B6 /* MenuViewController.swift in Sources */,
 				940A74131FB6CFD5009D99B6 /* VirtualObjectARView.swift in Sources */,

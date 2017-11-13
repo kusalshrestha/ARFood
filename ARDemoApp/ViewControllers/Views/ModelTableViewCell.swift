@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol ModelSelectionDelegate: NSObjectProtocol {
-  func modelDidSelect(model: VirtualObject)
-}
-
 class ModelTableViewCell: UITableViewCell {
   
   @IBOutlet weak var titile: UILabel!
@@ -20,7 +16,7 @@ class ModelTableViewCell: UITableViewCell {
   let cellWidth = UIScreen.main.bounds.width * 0.75
   let collectionViewVM = CollectionViewVM.sharedInstance
   var indexPathOfTableView: IndexPath?
-  weak var delegate: ModelSelectionDelegate?
+  var modelSelection: ((VirtualObject) -> ())?
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -61,7 +57,8 @@ extension ModelTableViewCell: UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let model = collectionViewVM.getModelsForIndexPath(indexpath: indexPathOfTableView!)[indexPath.row]
     print(model.displayName)
-    self.delegate?.modelDidSelect(model: model)
+    guard let modelSelection = modelSelection else { return }
+    modelSelection(model)
   }
   
 }
