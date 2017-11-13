@@ -40,4 +40,29 @@ class MainViewControllerVM: NSObject {
     ARSceneView.session.run(config, options: [])
   }
   
+  func getMessageAccordingToARState(for frame: ARFrame, trackingState: ARCamera.TrackingState) -> String {
+    let message: String
+    
+    switch trackingState {
+    case .normal where frame.anchors.isEmpty:
+      message = "Move the device around to detect horizontal surfaces. 👈"
+      
+    case .normal:
+      message = "Well Done 👏"
+      
+    case .notAvailable:
+      message = "😔 Tracking unavailable."
+      
+    case .limited(.excessiveMotion):
+      message = "Tracking limited - Move the device more slowly. 🐢"
+      
+    case .limited(.insufficientFeatures):
+      message = "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions. 💡"
+      
+    case .limited(.initializing):
+      message = "👉 Initializing AR session."
+    }
+    return message
+  }
+  
 }

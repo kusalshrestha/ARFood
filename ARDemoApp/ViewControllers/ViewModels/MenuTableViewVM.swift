@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 class MenuTableViewVM: NSObject {
-  
-//  static var sharedInstance = MenuTableViewVM()
-  
+    
   private override init() {
     super.init()
   }

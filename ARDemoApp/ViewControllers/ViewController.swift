@@ -45,7 +45,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
-    //Animation logo Animation
+    logoAnimationWithCompletion {
+      self.showHideBlurOverlay(show: false)
+      self.mainVCVM.runARSession(ARSceneView: self.ARsceneView)
+    }
+  }
+  
+  //MARK:-  Animation logo Animation ladder
+  private func logoAnimationWithCompletion(animationCompletion: @escaping () -> ()) {
     UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseInOut, animations: {
       self.logoImageView.alpha = 1
     }) { (completed) in
@@ -56,20 +63,18 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
           self.whiteBackGroundView.alpha = 0
         }, completion: { (completed) in
           self.whiteBackGroundView.removeFromSuperview()
+          animationCompletion()
         })
       })
     }
-    
-    showHideBlurOverlay(show: false)
-    mainVCVM.runARSession(ARSceneView: ARsceneView)
   }
   
-  func showHideBlurOverlay(show: Bool) {
+  private func showHideBlurOverlay(show: Bool) {
     let alphaValue: CGFloat = show ? 1 : 0
     UIView.animate(withDuration: 1, animations: {
       self.starrerBlurView.alpha = alphaValue
     }) { (completed) in
-      //
+      // completion block
     }
   }
   
@@ -107,28 +112,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   }
   
   private func updateSessionInfoLabel(for frame: ARFrame, trackingState: ARCamera.TrackingState) {
-    let message: String
-    
-    switch trackingState {
-    case .normal where frame.anchors.isEmpty:
-      message = "Move the device around to detect horizontal surfaces. 👈"
-      
-    case .normal:
-      message = "Well Done 👏"
-      
-    case .notAvailable:
-      message = "😔 Tracking unavailable."
-      
-    case .limited(.excessiveMotion):
-      message = "Tracking limited - Move the device more slowly. 🐢"
-      
-    case .limited(.insufficientFeatures):
-      message = "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions. 💡"
-      
-    case .limited(.initializing):
-      message = "👉 Initializing AR session."
-    }
-    
+    let message = mainVCVM.getMessageAccordingToARState(for: frame, trackingState: trackingState)
     ARStatusLabel.text = message
     ARInfoView.isHidden = message.isEmpty
   }
@@ -219,13 +203,11 @@ extension ViewController {
   
   func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
     guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-    guard let carScene = SCNScene(named: "Places.scnassets/Boudha/model.dae") else { return }
-    guard let carNode = carScene.rootNode.childNode(withName: "SketchUp", recursively: false) else { return }
-//    guard let platformNode = carScene.rootNode.childNode(withName: "platform", recursively: false) else { return }
-    let modelNode = SCNNode()
-    modelNode.addChildNode(carNode)
-//    modelNode.addChildNode(platformNode)
-    modelNode.scale = SCNVector3(x: 0.0001, y: 0.0001, z: 0.0001)
+    
+    let box = SCNBox(width: 2, height: 2, length: 2, chamferRadius: 0)
+    box.firstMaterial?.diffuse.contents = UIColor.red
+    let modelNode = SCNNode(geometry: box)
+//    modelNode.scale = SCNVector3(x: 0.0001, y: 0.0001, z: 0.0001)
 //    modelNode.simdPosition = float3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
 //    modelNode.eulerAngles = SCNVector3Make(Float(Double.pi / 2), 0, 0)
     node.addChildNode(modelNode)

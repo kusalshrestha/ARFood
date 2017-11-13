@@ -56,7 +56,6 @@ extension ModelTableViewCell: UICollectionViewDataSource {
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let model = collectionViewVM.getModelsForIndexPath(indexpath: indexPathOfTableView!)[indexPath.row]
-    print(model.displayName)
     guard let modelSelection = modelSelection else { return }
     modelSelection(model)
   }
