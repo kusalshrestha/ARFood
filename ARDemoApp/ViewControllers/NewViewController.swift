@@ -77,7 +77,7 @@ class NewViewController: UIViewController {
   }
   
   func insertObjects() {
-    let breakFastModelNode = VirtualObject(model: .cocacola)
+    let breakFastModelNode = ModelObject(model: .cocacola)
     let modelNode = breakFastModelNode.getModel()
     scene.rootNode.addChildNode(modelNode)
     print(modelNode.position)

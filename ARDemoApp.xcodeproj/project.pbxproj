@@ -8,23 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		940254EF1FAB1B2C00402B7E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940254EE1FAB1B2C00402B7E /* Utilities.swift */; };
+		9404D3AD1FBADF0C0078331D /* white-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9404D3AC1FBADF0C0078331D /* white-shadow.png */; };
+		9404D3B11FBAE6370078331D /* black-shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9404D3B01FBAE6370078331D /* black-shadow.png */; };
+		9404D3C01FBB3F5F0078331D /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3BE1FBB3F5F0078331D /* VirtualObjectLoader.swift */; };
+		9404D3C11FBB3F5F0078331D /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3BF1FBB3F5F0078331D /* VirtualObject.swift */; };
+		9404D3C51FBB3F750078331D /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3C31FBB3F740078331D /* FocusSquareSegment.swift */; };
+		9404D3C61FBB3F750078331D /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3C41FBB3F740078331D /* FocusSquare.swift */; };
+		9404D3C81FBB3FA50078331D /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3C71FBB3FA50078331D /* VirtualObjectARView.swift */; };
+		9404D3CA1FBB4C210078331D /* VirtualObjectInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3C91FBB4C210078331D /* VirtualObjectInteraction.swift */; };
+		9404D3CC1FBB4C4C0078331D /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3CB1FBB4C4C0078331D /* ThresholdPanGesture.swift */; };
+		9404D3CE1FBB53AA0078331D /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3CD1FBB53AA0078331D /* ViewController+Extension.swift */; };
 		940A52BA1FB8AE25002272D6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */; };
-		940A74131FB6CFD5009D99B6 /* VirtualObjectARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A740D1FB6CFD4009D99B6 /* VirtualObjectARView.swift */; };
 		940A74141FB6CFD5009D99B6 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A740E1FB6CFD4009D99B6 /* Axis.swift */; };
 		940A74161FB6CFD5009D99B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74101FB6CFD5009D99B6 /* AppDelegate.swift */; };
 		940A74241FB6D12B009D99B6 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A741F1FB6D12A009D99B6 /* NewViewController.swift */; };
 		940A74251FB6D12B009D99B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74201FB6D12A009D99B6 /* ViewController.swift */; };
 		940A74271FB6D12B009D99B6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74221FB6D12B009D99B6 /* MenuViewController.swift */; };
 		940A742A1FB6D13E009D99B6 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74281FB6D13E009D99B6 /* MainModel.swift */; };
-		940A742B1FB6D13E009D99B6 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74291FB6D13E009D99B6 /* VirtualObject.swift */; };
+		940A742B1FB6D13E009D99B6 /* ModelObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74291FB6D13E009D99B6 /* ModelObject.swift */; };
 		940A742D1FB6D146009D99B6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A742C1FB6D146009D99B6 /* UIView+Extension.swift */; };
-		940A74331FB6D1AD009D99B6 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74311FB6D1AD009D99B6 /* FocusSquare.swift */; };
-		940A74341FB6D1AD009D99B6 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74321FB6D1AD009D99B6 /* FocusSquareSegment.swift */; };
 		940A74371FB6D1E3009D99B6 /* ModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74351FB6D1E3009D99B6 /* ModelTableViewCell.swift */; };
 		940A74381FB6D1E3009D99B6 /* ModelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74361FB6D1E3009D99B6 /* ModelCollectionViewCell.swift */; };
 		940A743B1FB6D1EA009D99B6 /* MenuTableViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74391FB6D1EA009D99B6 /* MenuTableViewVM.swift */; };
 		940A743C1FB6D1EA009D99B6 /* CollectionViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A743A1FB6D1EA009D99B6 /* CollectionViewVM.swift */; };
-		94250ED51FB590EC0068FEFB /* Places.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 94250ED41FB590EC0068FEFB /* Places.scnassets */; };
 		94677DD71FB9C4FC005689D5 /* SCNNode+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94677DD61FB9C4FB005689D5 /* SCNNode+Extension.swift */; };
 		94677DDB1FB9F7E1005689D5 /* MainVCVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94677DDA1FB9F7E1005689D5 /* MainVCVM.swift */; };
 		9480AD4C1F974D750019492F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9480AD4A1F974D750019492F /* Main.storyboard */; };
@@ -59,7 +65,6 @@
 		94F44FE61FB4B95600653705 /* PepperoniPizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCD1FB4B95600653705 /* PepperoniPizza.jpg */; };
 		94F44FE71FB4B95600653705 /* HotDog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCE1FB4B95600653705 /* HotDog.jpg */; };
 		94F44FE81FB4B95600653705 /* ChineseInstantNoodles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FCF1FB4B95600653705 /* ChineseInstantNoodles.jpg */; };
-		94FDA97A1F9ED28A008160CE /* Cars.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 94FDA9791F9ED28A008160CE /* Cars.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,23 +86,29 @@
 
 /* Begin PBXFileReference section */
 		940254EE1FAB1B2C00402B7E /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9404D3AC1FBADF0C0078331D /* white-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-shadow.png"; sourceTree = "<group>"; };
+		9404D3B01FBAE6370078331D /* black-shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-shadow.png"; sourceTree = "<group>"; };
+		9404D3BE1FBB3F5F0078331D /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
+		9404D3BF1FBB3F5F0078331D /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		9404D3C31FBB3F740078331D /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		9404D3C41FBB3F740078331D /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		9404D3C71FBB3FA50078331D /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
+		9404D3C91FBB4C210078331D /* VirtualObjectInteraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectInteraction.swift; sourceTree = "<group>"; };
+		9404D3CB1FBB4C4C0078331D /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
+		9404D3CD1FBB53AA0078331D /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
-		940A740D1FB6CFD4009D99B6 /* VirtualObjectARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectARView.swift; sourceTree = "<group>"; };
 		940A740E1FB6CFD4009D99B6 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
 		940A74101FB6CFD5009D99B6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		940A741F1FB6D12A009D99B6 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
 		940A74201FB6D12A009D99B6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		940A74221FB6D12B009D99B6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		940A74281FB6D13E009D99B6 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
-		940A74291FB6D13E009D99B6 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		940A74291FB6D13E009D99B6 /* ModelObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelObject.swift; sourceTree = "<group>"; };
 		940A742C1FB6D146009D99B6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		940A74311FB6D1AD009D99B6 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
-		940A74321FB6D1AD009D99B6 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
 		940A74351FB6D1E3009D99B6 /* ModelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTableViewCell.swift; sourceTree = "<group>"; };
 		940A74361FB6D1E3009D99B6 /* ModelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelCollectionViewCell.swift; sourceTree = "<group>"; };
 		940A74391FB6D1EA009D99B6 /* MenuTableViewVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewVM.swift; sourceTree = "<group>"; };
 		940A743A1FB6D1EA009D99B6 /* CollectionViewVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewVM.swift; sourceTree = "<group>"; };
-		94250ED41FB590EC0068FEFB /* Places.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Places.scnassets; sourceTree = "<group>"; };
 		94677DD61FB9C4FB005689D5 /* SCNNode+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNNode+Extension.swift"; sourceTree = "<group>"; };
 		94677DDA1FB9F7E1005689D5 /* MainVCVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCVM.swift; sourceTree = "<group>"; };
 		9480AD431F974D750019492F /* ARDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,7 +149,6 @@
 		94F44FCD1FB4B95600653705 /* PepperoniPizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PepperoniPizza.jpg; sourceTree = "<group>"; };
 		94F44FCE1FB4B95600653705 /* HotDog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HotDog.jpg; sourceTree = "<group>"; };
 		94F44FCF1FB4B95600653705 /* ChineseInstantNoodles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChineseInstantNoodles.jpg; sourceTree = "<group>"; };
-		94FDA9791F9ED28A008160CE /* Cars.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Cars.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,9 +181,28 @@
 			children = (
 				940254EE1FAB1B2C00402B7E /* Utilities.swift */,
 				948F2C8E1FB36736003550B1 /* AnimationUtil.swift */,
-				940A74301FB6D18F009D99B6 /* FocusSquare */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9404D3BC1FBB3F290078331D /* FocusSquare */ = {
+			isa = PBXGroup;
+			children = (
+				9404D3C41FBB3F740078331D /* FocusSquare.swift */,
+				9404D3C31FBB3F740078331D /* FocusSquareSegment.swift */,
+			);
+			path = FocusSquare;
+			sourceTree = "<group>";
+		};
+		9404D3BD1FBB3F330078331D /* VirtualObject */ = {
+			isa = PBXGroup;
+			children = (
+				9404D3BF1FBB3F5F0078331D /* VirtualObject.swift */,
+				9404D3C91FBB4C210078331D /* VirtualObjectInteraction.swift */,
+				9404D3CB1FBB4C4C0078331D /* ThresholdPanGesture.swift */,
+				9404D3BE1FBB3F5F0078331D /* VirtualObjectLoader.swift */,
+			);
+			path = VirtualObject;
 			sourceTree = "<group>";
 		};
 		940A741A1FB6D089009D99B6 /* Categories */ = {
@@ -190,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				940A74281FB6D13E009D99B6 /* MainModel.swift */,
-				940A74291FB6D13E009D99B6 /* VirtualObject.swift */,
+				940A74291FB6D13E009D99B6 /* ModelObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +230,7 @@
 				940A74221FB6D12B009D99B6 /* MenuViewController.swift */,
 				940A741F1FB6D12A009D99B6 /* NewViewController.swift */,
 				940A74201FB6D12A009D99B6 /* ViewController.swift */,
+				9404D3CD1FBB53AA0078331D /* ViewController+Extension.swift */,
 				940A742F1FB6D155009D99B6 /* Views */,
 				940A742E1FB6D14F009D99B6 /* ViewModels */,
 			);
@@ -221,18 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				940A74361FB6D1E3009D99B6 /* ModelCollectionViewCell.swift */,
+				9404D3C71FBB3FA50078331D /* VirtualObjectARView.swift */,
 				940A74351FB6D1E3009D99B6 /* ModelTableViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		940A74301FB6D18F009D99B6 /* FocusSquare */ = {
-			isa = PBXGroup;
-			children = (
-				940A74311FB6D1AD009D99B6 /* FocusSquare.swift */,
-				940A74321FB6D1AD009D99B6 /* FocusSquareSegment.swift */,
-			);
-			path = FocusSquare;
 			sourceTree = "<group>";
 		};
 		9480AD3A1F974D750019492F = {
@@ -258,19 +280,18 @@
 		9480AD451F974D750019492F /* ARDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				9404D3BD1FBB3F330078331D /* VirtualObject */,
+				9404D3BC1FBB3F290078331D /* FocusSquare */,
 				940A741D1FB6D0CB009D99B6 /* ViewControllers */,
 				940A741C1FB6D0BA009D99B6 /* Models */,
 				940A741A1FB6D089009D99B6 /* Categories */,
 				940A74101FB6CFD5009D99B6 /* AppDelegate.swift */,
 				940A740E1FB6CFD4009D99B6 /* Axis.swift */,
-				940A740D1FB6CFD4009D99B6 /* VirtualObjectARView.swift */,
 				9480AD4A1F974D750019492F /* Main.storyboard */,
 				9480AD4F1F974D750019492F /* LaunchScreen.storyboard */,
 				940254ED1FAB1B2300402B7E /* Utilities */,
 				94F44FB61FB4B92C00653705 /* Images */,
 				9480AD4D1F974D750019492F /* Assets.xcassets */,
-				94FDA9791F9ED28A008160CE /* Cars.scnassets */,
-				94250ED41FB590EC0068FEFB /* Places.scnassets */,
 				948F2C8A1FB351A7003550B1 /* Food.scnassets */,
 				9480AD521F974D750019492F /* Info.plist */,
 			);
@@ -298,6 +319,8 @@
 		94F44FB61FB4B92C00653705 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9404D3B01FBAE6370078331D /* black-shadow.png */,
+				9404D3AC1FBADF0C0078331D /* white-shadow.png */,
 				94F44FC51FB4B95400653705 /* Bierfles.jpeg */,
 				94F44FCA1FB4B95500653705 /* BirthdayCake.jpg */,
 				94F44FBF1FB4B95300653705 /* BlackForestCake.jpg */,
@@ -435,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9480AD511F974D750019492F /* LaunchScreen.storyboard in Resources */,
+				9404D3B11FBAE6370078331D /* black-shadow.png in Resources */,
 				94F44FD71FB4B95600653705 /* OskarBlues.jpg in Resources */,
 				94F44FDD1FB4B95600653705 /* InstantNoodles.jpg in Resources */,
 				94F44FE71FB4B95600653705 /* HotDog.jpg in Resources */,
@@ -447,7 +471,6 @@
 				94F44FE61FB4B95600653705 /* PepperoniPizza.jpg in Resources */,
 				94F44FE41FB4B95600653705 /* BreakFast.jpg in Resources */,
 				94F44FD01FB4B95600653705 /* Giapponese.jpg in Resources */,
-				94FDA97A1F9ED28A008160CE /* Cars.scnassets in Resources */,
 				94F44FE01FB4B95600653705 /* JackDaniels.jpg in Resources */,
 				94F44FDE1FB4B95600653705 /* Bierfles.jpeg in Resources */,
 				94F44FD21FB4B95600653705 /* PotatoChips.jpg in Resources */,
@@ -457,11 +480,11 @@
 				94F44FE81FB4B95600653705 /* ChineseInstantNoodles.jpg in Resources */,
 				94F44FD11FB4B95600653705 /* Soup.jpg in Resources */,
 				94F44FD31FB4B95600653705 /* Lemonade.jpeg in Resources */,
+				9404D3AD1FBADF0C0078331D /* white-shadow.png in Resources */,
 				94F44FDB1FB4B95600653705 /* Noodles.jpg in Resources */,
 				94F44FD91FB4B95600653705 /* Cocacola.jpg in Resources */,
 				94F44FDC1FB4B95600653705 /* Clicquot.jpg in Resources */,
 				94F44FDA1FB4B95600653705 /* BurgerFries.jpg in Resources */,
-				94250ED51FB590EC0068FEFB /* Places.scnassets in Resources */,
 				94F44FE21FB4B95600653705 /* ChocolateCake.jpg in Resources */,
 				948F2C8B1FB351A7003550B1 /* Food.scnassets in Resources */,
 				94F44FE51FB4B95600653705 /* FranksBeansDinner.jpg in Resources */,
@@ -490,25 +513,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				940A52BA1FB8AE25002272D6 /* UICollectionView+Extension.swift in Sources */,
+				9404D3C61FBB3F750078331D /* FocusSquare.swift in Sources */,
+				9404D3C81FBB3FA50078331D /* VirtualObjectARView.swift in Sources */,
 				948F2C8F1FB36736003550B1 /* AnimationUtil.swift in Sources */,
-				940A74331FB6D1AD009D99B6 /* FocusSquare.swift in Sources */,
+				9404D3C11FBB3F5F0078331D /* VirtualObject.swift in Sources */,
 				940A74381FB6D1E3009D99B6 /* ModelCollectionViewCell.swift in Sources */,
-				940A74341FB6D1AD009D99B6 /* FocusSquareSegment.swift in Sources */,
+				9404D3CA1FBB4C210078331D /* VirtualObjectInteraction.swift in Sources */,
 				94677DD71FB9C4FC005689D5 /* SCNNode+Extension.swift in Sources */,
 				940A742D1FB6D146009D99B6 /* UIView+Extension.swift in Sources */,
 				940A74271FB6D12B009D99B6 /* MenuViewController.swift in Sources */,
-				940A74131FB6CFD5009D99B6 /* VirtualObjectARView.swift in Sources */,
 				940A74251FB6D12B009D99B6 /* ViewController.swift in Sources */,
 				940A74241FB6D12B009D99B6 /* NewViewController.swift in Sources */,
 				940A743C1FB6D1EA009D99B6 /* CollectionViewVM.swift in Sources */,
 				940A742A1FB6D13E009D99B6 /* MainModel.swift in Sources */,
 				940254EF1FAB1B2C00402B7E /* Utilities.swift in Sources */,
 				940A743B1FB6D1EA009D99B6 /* MenuTableViewVM.swift in Sources */,
-				940A742B1FB6D13E009D99B6 /* VirtualObject.swift in Sources */,
+				940A742B1FB6D13E009D99B6 /* ModelObject.swift in Sources */,
 				940A74371FB6D1E3009D99B6 /* ModelTableViewCell.swift in Sources */,
+				9404D3CE1FBB53AA0078331D /* ViewController+Extension.swift in Sources */,
+				9404D3C51FBB3F750078331D /* FocusSquareSegment.swift in Sources */,
 				940A74161FB6CFD5009D99B6 /* AppDelegate.swift in Sources */,
 				94677DDB1FB9F7E1005689D5 /* MainVCVM.swift in Sources */,
 				940A74141FB6CFD5009D99B6 /* Axis.swift in Sources */,
+				9404D3C01FBB3F5F0078331D /* VirtualObjectLoader.swift in Sources */,
+				9404D3CC1FBB4C4C0078331D /* ThresholdPanGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

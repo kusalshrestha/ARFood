@@ -15,7 +15,6 @@ class MainViewControllerVM: NSObject {
   
   let scene = SCNScene()
   var isSurfaceDetected = false
-  var focusSquare = FocusSquare()
 
   override init() {
     super.init()
@@ -32,7 +31,6 @@ class MainViewControllerVM: NSObject {
     UIApplication.shared.isIdleTimerDisabled = true
     
     ARSceneView.scene = scene
-    ARSceneView.scene.rootNode.addChildNode(focusSquare)
   }
   
   func runARSession(ARSceneView: VirtualObjectARView) {
@@ -41,7 +39,7 @@ class MainViewControllerVM: NSObject {
     config.planeDetection = .horizontal
     config.worldAlignment = .gravityAndHeading
     config.isLightEstimationEnabled = true
-    ARSceneView.session.run(config, options: [])
+    ARSceneView.session.run(config, options: [.resetTracking])
   }
   
   func getMessageAccordingToARState(for frame: ARFrame, trackingState: ARCamera.TrackingState) -> String {

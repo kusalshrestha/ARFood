@@ -64,14 +64,14 @@ class VirtualObjectARView: ARSCNView {
     // MARK: Position Testing
     
     /// Hit tests against the `sceneView` to find an object at the provided point.
-//    func virtualObject(at point: CGPoint) -> VirtualObject? {
-//        let hitTestOptions: [SCNHitTestOption: Any] = [.boundingBoxOnly: true]
-//        let hitTestResults = hitTest(point, options: hitTestOptions)
-//        
-//        return hitTestResults.lazy.flatMap { result in
-//            return VirtualObject.existingObjectContainingNode(result.node)
-//        }.first
-//    }
+    func virtualObject(at point: CGPoint) -> VirtualObject? {
+        let hitTestOptions: [SCNHitTestOption: Any] = [.boundingBoxOnly: true]
+        let hitTestResults = hitTest(point, options: hitTestOptions)
+        
+        return hitTestResults.lazy.flatMap { result in
+            return VirtualObject.existingObjectContainingNode(result.node)
+        }.first
+    }
 
     /**
      Hit tests from the provided screen position to return the most accuarte result possible.
@@ -199,10 +199,10 @@ class VirtualObjectARView: ARSCNView {
                                         featureDistanceToHitResult: featureDistanceFromResult)
         }
 
-        // Sort the results by feature distance to the ray origin.
+        // Sort the results by feature distance to the ray.
         let sortedResults = results.sorted { $0.distanceToRayOrigin < $1.distanceToRayOrigin }
 
-		let remainingResults = maxResults > 0 ? Array(sortedResults.prefix(maxResults)) : sortedResults
+        let remainingResults = sortedResults.dropFirst(maxResults)
 
         return Array(remainingResults)
     }

@@ -9,7 +9,7 @@
 import Foundation
 import SceneKit
 
-class VirtualObject {
+class ModelObject {
   
   var category: Category!
   var model: ArtificialModel!
@@ -189,33 +189,33 @@ class VirtualObject {
     return modelNode
   }
   
-  class func getAllModels() -> [VirtualObject] {
-    var models: [VirtualObject] = []
+  class func getAllModels() -> [ModelObject] {
+    var models: [ModelObject] = []
     
-    models.append(VirtualObject(model: .aarquiteta))
-    models.append(VirtualObject(model: .bierfles))
-    models.append(VirtualObject(model: .birthdayCake))
-    models.append(VirtualObject(model: .blackforest))
-    models.append(VirtualObject(model: .breakfast))
-    models.append(VirtualObject(model: .burger))
-    models.append(VirtualObject(model: .burgerFries))
-    models.append(VirtualObject(model: .cakePiece))
-    models.append(VirtualObject(model: .chineseNoodles))
-    models.append(VirtualObject(model: .chocolateCake))
-    models.append(VirtualObject(model: .clicquot))
-    models.append(VirtualObject(model: .cocacola))
-    models.append(VirtualObject(model: .fastFood))
-    models.append(VirtualObject(model: .franksBeansDinner))
-    models.append(VirtualObject(model: .giapponese))
-    models.append(VirtualObject(model: .instantNodoles))
-    models.append(VirtualObject(model: .jackDaniels))
-    models.append(VirtualObject(model: .oskarBluesBeer))
-    models.append(VirtualObject(model: .pepperoniPizza))
-    models.append(VirtualObject(model: .potatoChips))
-    models.append(VirtualObject(model: .soup))
-    models.append(VirtualObject(model: .sucos))
-    models.append(VirtualObject(model: .weddingCake))
-    models.append(VirtualObject(model: .senzaTitolo))
+    models.append(ModelObject(model: .aarquiteta))
+    models.append(ModelObject(model: .bierfles))
+    models.append(ModelObject(model: .birthdayCake))
+    models.append(ModelObject(model: .blackforest))
+    models.append(ModelObject(model: .breakfast))
+    models.append(ModelObject(model: .burger))
+    models.append(ModelObject(model: .burgerFries))
+    models.append(ModelObject(model: .cakePiece))
+    models.append(ModelObject(model: .chineseNoodles))
+    models.append(ModelObject(model: .chocolateCake))
+    models.append(ModelObject(model: .clicquot))
+    models.append(ModelObject(model: .cocacola))
+    models.append(ModelObject(model: .fastFood))
+    models.append(ModelObject(model: .franksBeansDinner))
+    models.append(ModelObject(model: .giapponese))
+    models.append(ModelObject(model: .instantNodoles))
+    models.append(ModelObject(model: .jackDaniels))
+    models.append(ModelObject(model: .oskarBluesBeer))
+    models.append(ModelObject(model: .pepperoniPizza))
+    models.append(ModelObject(model: .potatoChips))
+    models.append(ModelObject(model: .soup))
+    models.append(ModelObject(model: .sucos))
+    models.append(ModelObject(model: .weddingCake))
+    models.append(ModelObject(model: .senzaTitolo))
     
     return models
   }

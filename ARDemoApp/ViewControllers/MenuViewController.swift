@@ -13,7 +13,7 @@ class MenuViewController: UIViewController {
   @IBOutlet var menuTableVM: MenuTableViewVM!
   @IBOutlet weak var tableView: UITableView!
 
-  var modelSelection: ((VirtualObject) -> ())?
+  var modelSelection: ((ModelObject) -> ())?
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -15,16 +15,16 @@ class MenuTableViewVM: NSObject {
     super.init()
   }
   
-  func getAllAvailabelModels() -> [VirtualObject] {
-    return VirtualObject.getAllModels()
+  func getAllAvailabelModels() -> [ModelObject] {
+    return ModelObject.getAllModels()
   }
   
   func numberOfRows() -> Int {
-    return VirtualObject.modelCategoryList().count
+    return ModelObject.modelCategoryList().count
   }
   
   func getHeaderTitleForIndexPath(indexpath: IndexPath) -> String {
-    return VirtualObject.modelCategoryList()[indexpath.row].getTitle().capitalized
+    return ModelObject.modelCategoryList()[indexpath.row].getTitle().capitalized
   }
   
 }

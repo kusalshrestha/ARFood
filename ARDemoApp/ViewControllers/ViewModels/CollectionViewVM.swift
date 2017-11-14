@@ -17,8 +17,8 @@ class CollectionViewVM: NSObject {
     super.init()
   }
   
-  func getModelsForIndexPath(indexpath: IndexPath) -> [VirtualObject] {
-    let models = VirtualObject.getAllModels().filter { $0.category == VirtualObject.modelCategoryList()[indexpath.row] }
+  func getModelsForIndexPath(indexpath: IndexPath) -> [ModelObject] {
+    let models = ModelObject.getAllModels().filter { $0.category == ModelObject.modelCategoryList()[indexpath.row] }
     return models
   }
   

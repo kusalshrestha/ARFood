@@ -16,7 +16,7 @@ class ModelTableViewCell: UITableViewCell {
   let cellWidth = UIScreen.main.bounds.width * 0.75
   let collectionViewVM = CollectionViewVM.sharedInstance
   var indexPathOfTableView: IndexPath?
-  var modelSelection: ((VirtualObject) -> ())?
+  var modelSelection: ((ModelObject) -> ())?
   
   override func awakeFromNib() {
     super.awakeFromNib()

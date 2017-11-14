@@ -47,5 +47,7 @@
 	</array>
 	<key>CFBundleDisplayName</key>
 	<string>Food Menu</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
