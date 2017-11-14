@@ -13,12 +13,15 @@ import ARKit
 
 class MainViewControllerVM: NSObject {
   
+  let scene = SCNScene()
+  var isSurfaceDetected = false
   var focusSquare = FocusSquare()
 
   override init() {
     super.init()
   }
   
+  // Should not think this should be here
   func configureScene(ARSceneView: VirtualObjectARView, delegate vc: ViewController) {
     ARSceneView.delegate = vc
     ARSceneView.session.delegate = vc
@@ -28,6 +31,7 @@ class MainViewControllerVM: NSObject {
     UIApplication.shared.isStatusBarHidden = true
     UIApplication.shared.isIdleTimerDisabled = true
     
+    ARSceneView.scene = scene
     ARSceneView.scene.rootNode.addChildNode(focusSquare)
   }
   
@@ -46,23 +50,52 @@ class MainViewControllerVM: NSObject {
     switch trackingState {
     case .normal where frame.anchors.isEmpty:
       message = "Move the device around to detect horizontal surfaces. 👈"
-      
+      isSurfaceDetected = false
+
     case .normal:
       message = "Well Done 👏"
+      isSurfaceDetected = true
       
     case .notAvailable:
       message = "😔 Tracking unavailable."
-      
+      isSurfaceDetected = false
+
     case .limited(.excessiveMotion):
       message = "Tracking limited - Move the device more slowly. 🐢"
-      
+      isSurfaceDetected = false
+
     case .limited(.insufficientFeatures):
       message = "Tracking limited - Point the device at an area with visible surface detail, or improve lighting conditions. 💡"
-      
+      isSurfaceDetected = false
+
     case .limited(.initializing):
       message = "👉 Initializing AR session."
+      isSurfaceDetected = false
     }
     return message
+  }
+  
+  func addSpotLightOnNode(rootNode: SCNNode) {
+    let secondaryLightSource = SCNLight()
+    secondaryLightSource.castsShadow = true
+    secondaryLightSource.intensity = 750
+    secondaryLightSource.type = .ambient
+    let secondaryLightNode = SCNNode()
+    secondaryLightNode.light = secondaryLightSource
+    secondaryLightNode.position = SCNVector3(x: 0, y: 250, z: 0)
+    rootNode.addChildNode(secondaryLightNode)
+    
+    let primaryLightSource = SCNLight()
+    primaryLightSource.castsShadow = true
+    primaryLightSource.type = .spot
+    primaryLightSource.shadowRadius = 20;
+    primaryLightSource.shadowSampleCount = 50;
+    let primaryLightNode = SCNNode()
+    primaryLightNode.light = primaryLightSource
+    primaryLightNode.position = SCNVector3(x: 0, y: 15, z: 0)
+    
+    primaryLightNode.eulerAngles.x = -.pi / 2
+    rootNode.addChildNode(primaryLightNode)
   }
   
 }

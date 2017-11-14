@@ -11,7 +11,10 @@ import SceneKit
 import ARKit
 import Photos
 
-class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
+class ViewController: UIViewController {
+  
+  private let buttonShowConstraint: CGFloat = 16
+  private let buttonHideConstraint: CGFloat = -60
   
   @IBOutlet weak var whiteBackGroundView: UIView!
   @IBOutlet weak var logoImageView: UIImageView!
@@ -25,7 +28,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   @IBOutlet weak var reloadButton: UIButton!
   @IBOutlet weak var addButton: UIButton!
   @IBOutlet weak var cameraButton: UIButton!
-  
+
+  @IBOutlet var constraints: [NSLayoutConstraint]!
+
   var focusSquare = FocusSquare()
 
   var screenCenter: CGPoint {
@@ -41,7 +46,14 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
     mainVCVM.configureScene(ARSceneView: ARsceneView, delegate: self)
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     
+    //hide all buttons, shows when surface is detected
+    buttonsHideShowAnimation(toShow: false, animationTime: 0, andDelay: 0)
+  }
+  
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     
@@ -69,12 +81,31 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     }
   }
   
-  private func showHideBlurOverlay(show: Bool) {
+  private func buttonsHideShowAnimation(toShow: Bool, animationTime time: TimeInterval, andDelay delay: TimeInterval, completion: (() -> ())? = nil) {
+    let newConstraint = toShow ? buttonShowConstraint : buttonHideConstraint
+    var delay = delay
+    for constraint in constraints {
+      constraint.constant = newConstraint
+      view.setNeedsUpdateConstraints()
+      UIView.animate(withDuration: time, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: { [weak self] in
+        self?.view.layoutIfNeeded()
+      }, completion: { [weak self] (completed) in
+        if (self?.constraints.index(of: constraint) == (self?.constraints.count)! - 1) {
+          completion?()
+          print("completed")
+        }
+      })
+      delay = delay + 0.1
+    }
+  }
+  
+  private func showHideBlurOverlay(show: Bool, completion: (() -> ())? = nil) {
     let alphaValue: CGFloat = show ? 1 : 0
     UIView.animate(withDuration: 1, animations: {
       self.starrerBlurView.alpha = alphaValue
     }) { (completed) in
       // completion block
+      completion?()
     }
   }
   
@@ -83,18 +114,19 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
     
     guard let menuVC = segue.destination as? MenuViewController else { return }
     showHideBlurOverlay(show: true)
-    menuVC.modelSelection = { model in
-      print(model.displayName)
-      menuVC.dismiss(animated: true, completion: nil)
-      self.showHideBlurOverlay(show: false)
-    }
-    
-//    toggleAnimation(ofSide: .bottom, toShow: false, delayBetweenAnimation: 0.1, animatingViews: [reloadButton, addButton, cameraButton])
+    buttonsHideShowAnimation(toShow: false, animationTime: 0.3, andDelay: 0.25, completion: {
+      menuVC.modelSelection = { model in
+        print(model.displayName)
+        menuVC.dismiss(animated: true, completion: nil)
+        self.showHideBlurOverlay(show: false)
+        self.buttonsHideShowAnimation(toShow: true, animationTime: 0.3, andDelay: 0.25)
+      }
+    })
   }
   
   @IBAction func dismissMenuVC(segue: UIStoryboardSegue) {
     self.showHideBlurOverlay(show: false)
-//    toggleAnimation(ofSide: .bottom, toShow: true, delayBetweenAnimation: 0.1, animatingViews: [reloadButton, addButton, cameraButton])
+    self.buttonsHideShowAnimation(toShow: true, animationTime: 0.3, andDelay: 0.25)
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -113,16 +145,13 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   
   private func updateSessionInfoLabel(for frame: ARFrame, trackingState: ARCamera.TrackingState) {
     let message = mainVCVM.getMessageAccordingToARState(for: frame, trackingState: trackingState)
+    mainVCVM.isSurfaceDetected ? buttonsHideShowAnimation(toShow: true, animationTime: 0.3, andDelay: 0.25) : buttonsHideShowAnimation(toShow: false, animationTime: 0.3, andDelay: 0.25)
     ARStatusLabel.text = message
     ARInfoView.isHidden = message.isEmpty
   }
   
   @IBAction func reloadTrackingAndVisulization(_ sender: UIButton) {
     resetTracking()
-  }
-  
-  @IBAction func pausePlay(_ sender: UIButton) {
-    // TODO: implement it later
   }
   
   private func resetTracking() {
@@ -141,84 +170,49 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
   }
   
   @IBAction func takeScreenshot() {
-    let takeScreenshotBlock = {
-      UIImageWriteToSavedPhotosAlbum(self.ARsceneView.snapshot(), nil, nil, nil)
-      DispatchQueue.main.async {
-        // Briefly flash the screen.
-        let flashOverlay = UIView(frame: self.ARsceneView.frame)
-        flashOverlay.backgroundColor = UIColor.white
-        self.ARsceneView.addSubview(flashOverlay)
-        UIView.animate(withDuration: 0.25, animations: {
-          flashOverlay.alpha = 0.0
-        }, completion: { _ in
-          flashOverlay.removeFromSuperview()
-        })
-      }
-    }
-    
     switch PHPhotoLibrary.authorizationStatus() {
     case .authorized:
-      takeScreenshotBlock()
+      ARsceneView.takeScreeShot()
     case .restricted, .denied:
       let message = "Photos access denied"
       ARStatusLabel.text = message
     case .notDetermined:
       PHPhotoLibrary.requestAuthorization({ (authorizationStatus) in
         if authorizationStatus == .authorized {
-          takeScreenshotBlock()
+          self.ARsceneView.takeScreeShot()
         }
       })
     }
   }
   
-  func addSpotLightOnNode(rootNode: SCNNode) {
-    let secondaryLightSource = SCNLight()
-    secondaryLightSource.castsShadow = true
-    secondaryLightSource.intensity = 750
-    secondaryLightSource.type = .ambient
-    let secondaryLightNode = SCNNode()
-    secondaryLightNode.light = secondaryLightSource
-    secondaryLightNode.position = SCNVector3(x: 0, y: 250, z: 0)
-    rootNode.addChildNode(secondaryLightNode)
-    
-    let primaryLightSource = SCNLight()
-    primaryLightSource.castsShadow = true
-    primaryLightSource.type = .spot
-    primaryLightSource.shadowRadius = 20;
-    primaryLightSource.shadowSampleCount = 50;
-    let primaryLightNode = SCNNode()
-    primaryLightNode.light = primaryLightSource
-    primaryLightNode.position = SCNVector3(x: 0, y: 15, z: 0)
-    
-    primaryLightNode.eulerAngles.x = -.pi / 2
-    rootNode.addChildNode(primaryLightNode)
-  }
-  
 }
 
 // MARK:- ARSCNViewDelegate
-extension ViewController {
+extension ViewController: ARSCNViewDelegate {
   
-//  func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {}
+  func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+    return nil
+  }
   
   func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
     guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
     
-    let box = SCNBox(width: 2, height: 2, length: 2, chamferRadius: 0)
+    let box = SCNBox(width: 20, height: 20, length: 20, chamferRadius: 0)
     box.firstMaterial?.diffuse.contents = UIColor.red
     let modelNode = SCNNode(geometry: box)
 //    modelNode.scale = SCNVector3(x: 0.0001, y: 0.0001, z: 0.0001)
 //    modelNode.simdPosition = float3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
 //    modelNode.eulerAngles = SCNVector3Make(Float(Double.pi / 2), 0, 0)
     node.addChildNode(modelNode)
-    addSpotLightOnNode(rootNode: node)
+    mainVCVM.scene.rootNode.addChildNode(modelNode)
+    mainVCVM.addSpotLightOnNode(rootNode: node)
 //    rotateModel(node: modelNode)
   }
   
 }
 
 // MARK: - ARSessionDelegate
-extension ViewController {
+extension ViewController: ARSessionDelegate {
   
   func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
     guard let frame = session.currentFrame else { return }

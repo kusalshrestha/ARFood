@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SceneKit
+import ARKit
 
 enum AnimatableSide {
   case left, right, top, bottom
@@ -49,6 +51,25 @@ extension UIView {
       self.frame.origin = actualPosition
     }) { (completed) in
       // compltion block
+    }
+  }
+  
+}
+
+extension ARSCNView {
+  
+  func takeScreeShot() {
+    UIImageWriteToSavedPhotosAlbum(self.snapshot(), nil, nil, nil)
+    DispatchQueue.main.async {
+      // Briefly flash the screen.
+      let flashOverlay = UIView(frame: self.frame)
+      flashOverlay.backgroundColor = UIColor.white
+      self.addSubview(flashOverlay)
+      UIView.animate(withDuration: 0.25, animations: {
+        flashOverlay.alpha = 0.0
+      }, completion: { _ in
+        flashOverlay.removeFromSuperview()
+      })
     }
   }
   

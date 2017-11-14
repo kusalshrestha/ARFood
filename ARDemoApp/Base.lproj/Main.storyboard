@@ -69,11 +69,28 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBp-ag-AzH">
-                                <rect key="frame" x="166" y="606" width="42" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWU-nU-ZeF" userLabel="Reload">
+                                <rect key="frame" x="16" y="603" width="40" height="48"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="BHd-q9-m6X"/>
-                                    <constraint firstAttribute="width" constant="42" id="tLz-w6-Lwg"/>
+                                    <constraint firstAttribute="height" constant="48" id="Cj5-Nd-uvQ"/>
+                                    <constraint firstAttribute="width" constant="40" id="MNB-aO-699"/>
+                                </constraints>
+                                <state key="normal" image="refresh"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" white="0.0" alpha="0.6491252200704225" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="reloadTrackingAndVisulization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zW7-49-vmU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBp-ag-AzH">
+                                <rect key="frame" x="163" y="603" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="BHd-q9-m6X"/>
+                                    <constraint firstAttribute="width" constant="48" id="tLz-w6-Lwg"/>
                                 </constraints>
                                 <state key="normal" image="shutter"/>
                                 <connections>
@@ -92,23 +109,6 @@
                                     <segue destination="dU2-xF-uXP" kind="presentation" id="wfF-EJ-XgX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWU-nU-ZeF" userLabel="Reload">
-                                <rect key="frame" x="16" y="603" width="40" height="48"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Cj5-Nd-uvQ"/>
-                                    <constraint firstAttribute="width" constant="40" id="MNB-aO-699"/>
-                                </constraints>
-                                <state key="normal" image="refresh"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
-                                        <color key="value" white="0.0" alpha="0.6491252200704225" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="reloadTrackingAndVisulization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zW7-49-vmU"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqB-LT-uJL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -125,18 +125,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Oqf-6v-TPB" firstAttribute="centerY" secondItem="qBp-ag-AzH" secondAttribute="centerY" id="1vl-KG-gjL"/>
                             <constraint firstItem="BGS-Ty-xu5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ah4-cO-vGN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qBp-ag-AzH" secondAttribute="bottom" constant="19" id="DkW-wy-t8u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qBp-ag-AzH" secondAttribute="bottom" constant="16" id="DkW-wy-t8u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f2J-Ol-h8s" secondAttribute="bottom" id="HM8-Mf-eA5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oqf-6v-TPB" secondAttribute="trailing" constant="16" id="IkU-3X-ub5"/>
                             <constraint firstItem="zqB-LT-uJL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JUj-MG-Ktl"/>
                             <constraint firstItem="ddY-Es-Ko3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="LA4-LR-MqB"/>
                             <constraint firstItem="zqB-LT-uJL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oj3-je-QaD"/>
                             <constraint firstItem="zqB-LT-uJL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="R7t-0h-YK1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oqf-6v-TPB" secondAttribute="bottom" constant="16" id="RBo-mT-pKK"/>
                             <constraint firstItem="BGS-Ty-xu5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SaP-Hw-rZc"/>
                             <constraint firstItem="qBp-ag-AzH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tss-0o-LPl"/>
-                            <constraint firstItem="AWU-nU-ZeF" firstAttribute="centerY" secondItem="qBp-ag-AzH" secondAttribute="centerY" id="W6w-7e-FlD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AWU-nU-ZeF" secondAttribute="bottom" constant="16" id="Wxm-8A-miQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2J-Ol-h8s" secondAttribute="trailing" id="aDl-MT-5ME"/>
                             <constraint firstItem="f2J-Ol-h8s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h2Y-iL-dGE"/>
                             <constraint firstItem="f2J-Ol-h8s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="j21-cE-p7q"/>
@@ -159,6 +159,9 @@
                         <outlet property="reloadButton" destination="AWU-nU-ZeF" id="ofh-Q6-iyl"/>
                         <outlet property="starrerBlurView" destination="BGS-Ty-xu5" id="Bfs-uH-SWq"/>
                         <outlet property="whiteBackGroundView" destination="zqB-LT-uJL" id="Y4O-YS-UIB"/>
+                        <outletCollection property="constraints" destination="Wxm-8A-miQ" collectionClass="NSMutableArray" id="gK1-sr-Fb1"/>
+                        <outletCollection property="constraints" destination="DkW-wy-t8u" collectionClass="NSMutableArray" id="FZW-PY-wKb"/>
+                        <outletCollection property="constraints" destination="RBo-mT-pKK" collectionClass="NSMutableArray" id="4Ux-GA-iia"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
