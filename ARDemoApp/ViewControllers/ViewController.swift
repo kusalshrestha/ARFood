@@ -31,9 +31,9 @@ class ViewController: UIViewController {
 
   @IBOutlet var constraints: [NSLayoutConstraint]!
 
-  var anchors: [ARPlaneAnchor] = []
   var placeholderNode: SCNNode?
   var lastModel: SCNNode = SCNNode()
+  var splitVC: SplitViewController?
   
   var focusSquare = FocusSquare()
   lazy var virtualObjectInteraction = VirtualObjectInteraction(sceneView: ARsceneView)
@@ -88,13 +88,13 @@ class ViewController: UIViewController {
   
   //MARK:-  Animation logo Animation ladder
   private func logoAnimationWithCompletion(animationCompletion: @escaping () -> ()) {
-    UIView.animate(withDuration: 0, delay: 0, options: .curveEaseInOut, animations: {
+    UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseInOut, animations: {
       self.logoImageView.alpha = 1
     }) { (completed) in
-      UIView.animate(withDuration: 0, delay: 0, options: .curveEaseInOut, animations: {
+      UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseInOut, animations: {
         self.logoImageView.alpha = 0
       }, completion: { (completed) in
-        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 1.5, delay: 1, options: .curveEaseInOut, animations: {
           self.whiteBackGroundView.alpha = 0
         }, completion: { (completed) in
           self.whiteBackGroundView.removeFromSuperview()
@@ -139,27 +139,7 @@ class ViewController: UIViewController {
       completion?()
     }
   }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    super.prepare(for: segue, sender: sender)
-    
-    guard let menuVC = segue.destination as? MenuViewController else { return }
-    showHideBlurOverlay(show: true)
-    buttonsHideShowAnimation(toShow: false, animationTime: 0.3, andDelay: 0.25)
-    menuVC.modelSelection = { [weak self] model in
-      print(model.displayName)
-      menuVC.dismiss(animated: true, completion: nil)
-      self?.showHideBlurOverlay(show: false)
-      self?.buttonsHideShowAnimation(toShow: true, animationTime: 0.3, andDelay: 0.25)
-      
-      self?.virtualObjectLoader.loadVirtualObject(model.virtualModel, loadedHandler: { loadedObject in
-        DispatchQueue.main.async {
-          self?.placeVirtualObject(loadedObject)
-        }
-      })
-    }
-  }
-  
+
   func placeVirtualObject(_ virtualObject: VirtualObject) {
     guard let cameraTransform = ARsceneView.session.currentFrame?.camera.transform,
       let focusSquarePosition = focusSquare.lastPosition else { return }
@@ -172,11 +152,23 @@ class ViewController: UIViewController {
     }
   }
   
-  @IBAction func dismissMenuVC(segue: UIStoryboardSegue) {
-    self.showHideBlurOverlay(show: false)
-    self.buttonsHideShowAnimation(toShow: true, animationTime: 0.3, andDelay: 0.25)
+  @IBAction func addButtonOnPress(_ sender: UIButton) {
+    splitVC = UIViewController.instantiate(vc: SplitViewController.self)
+    buttonsHideShowAnimation(toShow: false, animationTime: 0.3, andDelay: 0.25)
+    showHideBlurOverlay(show: true, completion: { [weak self] in
+      self?.present((self?.splitVC)!, animated: true, completion: nil)
+    })
+
+    splitVC?.menuVC.delegate = self
+    splitVC?.dismissViewCallback = closeSplitVC
   }
   
+  func closeSplitVC() {
+    splitVC?.dismiss(animated: true, completion: nil)
+    self.buttonsHideShowAnimation(toShow: true, animationTime: 0.3, andDelay: 0.25)
+    self.showHideBlurOverlay(show: false, completion: nil)
+  }
+    
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
     
@@ -205,7 +197,7 @@ class ViewController: UIViewController {
   private func resetTracking() {
     let configuration = ARWorldTrackingConfiguration()
     configuration.planeDetection = .horizontal
-    anchors.removeAll()
+    self.virtualObjectLoader.removeAllVirtualObjects()
     ARsceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
   }
   

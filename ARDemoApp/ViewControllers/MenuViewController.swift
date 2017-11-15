@@ -8,12 +8,19 @@
 
 import UIKit
 
+protocol ModelSelectionDelegate: NSObjectProtocol {
+  
+  func modelDidSelect(model: ModelObject)
+  
+}
+
 class MenuViewController: UIViewController {
   
   @IBOutlet var menuTableVM: MenuTableViewVM!
   @IBOutlet weak var tableView: UITableView!
 
-  var modelSelection: ((ModelObject) -> ())?
+  var profileButtonOnClick: (() -> ())?
+  weak var delegate: ModelSelectionDelegate?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,6 +34,14 @@ class MenuViewController: UIViewController {
     tableView.estimatedRowHeight = 150
   }
   
+  @IBAction func profileButtonOnPress(_ sender: UIButton) {
+    profileButtonOnClick?()
+  }
+  
+  func selected(model: ModelObject) {
+    delegate?.modelDidSelect(model: model)
+  }
+  
 }
 
 extension MenuViewController: UITableViewDataSource {
@@ -38,7 +53,7 @@ extension MenuViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ModelTableViewCell.self), for: indexPath) as! ModelTableViewCell
     cell.titile.text = menuTableVM.getHeaderTitleForIndexPath(indexpath: indexPath)
-    cell.modelSelection = modelSelection
+    cell.modelSelection = selected
     return cell
   }
   

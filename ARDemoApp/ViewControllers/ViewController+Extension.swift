@@ -76,3 +76,16 @@ extension ViewController: ARSCNViewDelegate, ARSessionDelegate {
   }
   
 }
+
+extension ViewController: ModelSelectionDelegate {
+  
+  func modelDidSelect(model: ModelObject) {
+    closeSplitVC()
+    self.virtualObjectLoader.loadVirtualObject(model.virtualModel, loadedHandler: { loadedObject in
+      DispatchQueue.main.async {
+        self.placeVirtualObject(loadedObject)
+      }
+    })
+  }
+  
+}

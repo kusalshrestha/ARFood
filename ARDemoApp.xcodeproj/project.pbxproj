@@ -19,9 +19,7 @@
 		9404D3CC1FBB4C4C0078331D /* ThresholdPanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3CB1FBB4C4C0078331D /* ThresholdPanGesture.swift */; };
 		9404D3CE1FBB53AA0078331D /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404D3CD1FBB53AA0078331D /* ViewController+Extension.swift */; };
 		940A52BA1FB8AE25002272D6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */; };
-		940A74141FB6CFD5009D99B6 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A740E1FB6CFD4009D99B6 /* Axis.swift */; };
 		940A74161FB6CFD5009D99B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74101FB6CFD5009D99B6 /* AppDelegate.swift */; };
-		940A74241FB6D12B009D99B6 /* TESTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A741F1FB6D12A009D99B6 /* TESTViewController.swift */; };
 		940A74251FB6D12B009D99B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74201FB6D12A009D99B6 /* ViewController.swift */; };
 		940A74271FB6D12B009D99B6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74221FB6D12B009D99B6 /* MenuViewController.swift */; };
 		940A742A1FB6D13E009D99B6 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74281FB6D13E009D99B6 /* MainModel.swift */; };
@@ -40,6 +38,15 @@
 		9480AD671F974D750019492F /* ARDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9480AD661F974D750019492F /* ARDemoAppUITests.swift */; };
 		948F2C8B1FB351A7003550B1 /* Food.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 948F2C8A1FB351A7003550B1 /* Food.scnassets */; };
 		948F2C8F1FB36736003550B1 /* AnimationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F2C8E1FB36736003550B1 /* AnimationUtil.swift */; };
+		94A09DFA1FBC0A9A00AE6D6E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A09DF71FBC0A9900AE6D6E /* FBSDKShareKit.framework */; };
+		94A09DFB1FBC0A9A00AE6D6E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A09DF81FBC0A9900AE6D6E /* FBSDKCoreKit.framework */; };
+		94A09DFC1FBC0A9A00AE6D6E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A09DF91FBC0A9900AE6D6E /* FBSDKLoginKit.framework */; };
+		94A09DFE1FBC2EBD00AE6D6E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94A09DFD1FBC2EBC00AE6D6E /* Bolts.framework */; };
+		94A09E001FBC2FB300AE6D6E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09DFF1FBC2FB300AE6D6E /* LoginViewController.swift */; };
+		94A09E021FBC5CED00AE6D6E /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09E011FBC5CED00AE6D6E /* UIViewController+Extension.swift */; };
+		94A09E041FBC7FE300AE6D6E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09E031FBC7FE300AE6D6E /* InitialViewController.swift */; };
+		94A09E061FBC86D200AE6D6E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09E051FBC86D200AE6D6E /* ProfileViewController.swift */; };
+		94A09E081FBC9B8700AE6D6E /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09E071FBC9B8700AE6D6E /* SplitViewController.swift */; };
 		94F44FD01FB4B95600653705 /* Giapponese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB71FB4B95200653705 /* Giapponese.jpg */; };
 		94F44FD11FB4B95600653705 /* Soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB81FB4B95300653705 /* Soup.jpg */; };
 		94F44FD21FB4B95600653705 /* PotatoChips.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB91FB4B95300653705 /* PotatoChips.jpg */; };
@@ -97,9 +104,7 @@
 		9404D3CB1FBB4C4C0078331D /* ThresholdPanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThresholdPanGesture.swift; sourceTree = "<group>"; };
 		9404D3CD1FBB53AA0078331D /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
-		940A740E1FB6CFD4009D99B6 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
 		940A74101FB6CFD5009D99B6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		940A741F1FB6D12A009D99B6 /* TESTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TESTViewController.swift; sourceTree = "<group>"; };
 		940A74201FB6D12A009D99B6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		940A74221FB6D12B009D99B6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		940A74281FB6D13E009D99B6 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
@@ -124,6 +129,15 @@
 		9480AD681F974D750019492F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948F2C8A1FB351A7003550B1 /* Food.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Food.scnassets; sourceTree = "<group>"; };
 		948F2C8E1FB36736003550B1 /* AnimationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUtil.swift; sourceTree = "<group>"; };
+		94A09DF71FBC0A9900AE6D6E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = SOURCE_ROOT; };
+		94A09DF81FBC0A9900AE6D6E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = SOURCE_ROOT; };
+		94A09DF91FBC0A9900AE6D6E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = SOURCE_ROOT; };
+		94A09DFD1FBC2EBC00AE6D6E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = SOURCE_ROOT; };
+		94A09DFF1FBC2FB300AE6D6E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ARDemoApp/ViewControllers/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		94A09E011FBC5CED00AE6D6E /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		94A09E031FBC7FE300AE6D6E /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		94A09E051FBC86D200AE6D6E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		94A09E071FBC9B8700AE6D6E /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		94F44FB71FB4B95200653705 /* Giapponese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Giapponese.jpg; sourceTree = "<group>"; };
 		94F44FB81FB4B95300653705 /* Soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Soup.jpg; sourceTree = "<group>"; };
 		94F44FB91FB4B95300653705 /* PotatoChips.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PotatoChips.jpg; sourceTree = "<group>"; };
@@ -156,6 +170,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A09DFA1FBC0A9A00AE6D6E /* FBSDKShareKit.framework in Frameworks */,
+				94A09DFB1FBC0A9A00AE6D6E /* FBSDKCoreKit.framework in Frameworks */,
+				94A09DFC1FBC0A9A00AE6D6E /* FBSDKLoginKit.framework in Frameworks */,
+				94A09DFE1FBC2EBD00AE6D6E /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */,
+				94A09E011FBC5CED00AE6D6E /* UIViewController+Extension.swift */,
 				940A742C1FB6D146009D99B6 /* UIView+Extension.swift */,
 				94677DD61FB9C4FB005689D5 /* SCNNode+Extension.swift */,
 			);
@@ -227,9 +246,12 @@
 		940A741D1FB6D0CB009D99B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				940A741F1FB6D12A009D99B6 /* TESTViewController.swift */,
-				940A74221FB6D12B009D99B6 /* MenuViewController.swift */,
+				94A09E031FBC7FE300AE6D6E /* InitialViewController.swift */,
+				94A09DFF1FBC2FB300AE6D6E /* LoginViewController.swift */,
 				940A74201FB6D12A009D99B6 /* ViewController.swift */,
+				940A74221FB6D12B009D99B6 /* MenuViewController.swift */,
+				94A09E071FBC9B8700AE6D6E /* SplitViewController.swift */,
+				94A09E051FBC86D200AE6D6E /* ProfileViewController.swift */,
 				9404D3CD1FBB53AA0078331D /* ViewController+Extension.swift */,
 				940A742F1FB6D155009D99B6 /* Views */,
 				940A742E1FB6D14F009D99B6 /* ViewModels */,
@@ -280,20 +302,23 @@
 		9480AD451F974D750019492F /* ARDemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				9404D3BD1FBB3F330078331D /* VirtualObject */,
-				9404D3BC1FBB3F290078331D /* FocusSquare */,
 				940A741D1FB6D0CB009D99B6 /* ViewControllers */,
 				940A741C1FB6D0BA009D99B6 /* Models */,
 				940A741A1FB6D089009D99B6 /* Categories */,
+				9404D3BD1FBB3F330078331D /* VirtualObject */,
+				9404D3BC1FBB3F290078331D /* FocusSquare */,
+				940254ED1FAB1B2300402B7E /* Utilities */,
 				940A74101FB6CFD5009D99B6 /* AppDelegate.swift */,
-				940A740E1FB6CFD4009D99B6 /* Axis.swift */,
 				9480AD4A1F974D750019492F /* Main.storyboard */,
 				9480AD4F1F974D750019492F /* LaunchScreen.storyboard */,
-				940254ED1FAB1B2300402B7E /* Utilities */,
 				94F44FB61FB4B92C00653705 /* Images */,
 				9480AD4D1F974D750019492F /* Assets.xcassets */,
 				948F2C8A1FB351A7003550B1 /* Food.scnassets */,
 				9480AD521F974D750019492F /* Info.plist */,
+				94A09DFD1FBC2EBC00AE6D6E /* Bolts.framework */,
+				94A09DF81FBC0A9900AE6D6E /* FBSDKCoreKit.framework */,
+				94A09DF91FBC0A9900AE6D6E /* FBSDKLoginKit.framework */,
+				94A09DF71FBC0A9900AE6D6E /* FBSDKShareKit.framework */,
 			);
 			path = ARDemoApp;
 			sourceTree = "<group>";
@@ -513,18 +538,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				940A52BA1FB8AE25002272D6 /* UICollectionView+Extension.swift in Sources */,
+				94A09E041FBC7FE300AE6D6E /* InitialViewController.swift in Sources */,
 				9404D3C61FBB3F750078331D /* FocusSquare.swift in Sources */,
 				9404D3C81FBB3FA50078331D /* VirtualObjectARView.swift in Sources */,
 				948F2C8F1FB36736003550B1 /* AnimationUtil.swift in Sources */,
 				9404D3C11FBB3F5F0078331D /* VirtualObject.swift in Sources */,
+				94A09E061FBC86D200AE6D6E /* ProfileViewController.swift in Sources */,
 				940A74381FB6D1E3009D99B6 /* ModelCollectionViewCell.swift in Sources */,
 				9404D3CA1FBB4C210078331D /* VirtualObjectInteraction.swift in Sources */,
 				94677DD71FB9C4FC005689D5 /* SCNNode+Extension.swift in Sources */,
 				940A742D1FB6D146009D99B6 /* UIView+Extension.swift in Sources */,
 				940A74271FB6D12B009D99B6 /* MenuViewController.swift in Sources */,
 				940A74251FB6D12B009D99B6 /* ViewController.swift in Sources */,
-				940A74241FB6D12B009D99B6 /* TESTViewController.swift in Sources */,
 				940A743C1FB6D1EA009D99B6 /* CollectionViewVM.swift in Sources */,
+				94A09E001FBC2FB300AE6D6E /* LoginViewController.swift in Sources */,
+				94A09E081FBC9B8700AE6D6E /* SplitViewController.swift in Sources */,
+				94A09E021FBC5CED00AE6D6E /* UIViewController+Extension.swift in Sources */,
 				940A742A1FB6D13E009D99B6 /* MainModel.swift in Sources */,
 				940254EF1FAB1B2C00402B7E /* Utilities.swift in Sources */,
 				940A743B1FB6D1EA009D99B6 /* MenuTableViewVM.swift in Sources */,
@@ -534,7 +563,6 @@
 				9404D3C51FBB3F750078331D /* FocusSquareSegment.swift in Sources */,
 				940A74161FB6CFD5009D99B6 /* AppDelegate.swift in Sources */,
 				94677DDB1FB9F7E1005689D5 /* MainVCVM.swift in Sources */,
-				940A74141FB6CFD5009D99B6 /* Axis.swift in Sources */,
 				9404D3C01FBB3F5F0078331D /* VirtualObjectLoader.swift in Sources */,
 				9404D3CC1FBB4C4C0078331D /* ThresholdPanGesture.swift in Sources */,
 			);
@@ -704,6 +732,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7DN9W93BF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = ARDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leapfrog.ARDemoApp;
@@ -719,6 +749,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N7DN9W93BF;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = ARDemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leapfrog.ARDemoApp;
