@@ -77,10 +77,10 @@ class NewViewController: UIViewController {
   }
   
   func insertObjects() {
-    let breakFastModelNode = ModelObject(model: .cocacola)
-    let modelNode = breakFastModelNode.getModel()
-    scene.rootNode.addChildNode(modelNode)
-    print(modelNode.position)
+//    let breakFastModelNode = ModelObject(model: .cocacola)
+//    let modelNode = breakFastModelNode.getModel()
+//    scene.rootNode.addChildNode(modelNode)
+//    print(modelNode.position)
   }
   
   func setupLight() {

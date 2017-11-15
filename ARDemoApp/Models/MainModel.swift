@@ -85,5 +85,10 @@ enum ArtificialModel {
       return "Food.scnassets/WeddingCake"
     }
   }
+  
+  func modelURL() -> URL? {
+    return Bundle.main.url(forResource: self.modelsPath() + "/model", withExtension: "dae")
+  }
+  
 }
 

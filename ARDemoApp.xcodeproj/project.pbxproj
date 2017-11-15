@@ -21,7 +21,7 @@
 		940A52BA1FB8AE25002272D6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */; };
 		940A74141FB6CFD5009D99B6 /* Axis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A740E1FB6CFD4009D99B6 /* Axis.swift */; };
 		940A74161FB6CFD5009D99B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74101FB6CFD5009D99B6 /* AppDelegate.swift */; };
-		940A74241FB6D12B009D99B6 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A741F1FB6D12A009D99B6 /* NewViewController.swift */; };
+		940A74241FB6D12B009D99B6 /* TESTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A741F1FB6D12A009D99B6 /* TESTViewController.swift */; };
 		940A74251FB6D12B009D99B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74201FB6D12A009D99B6 /* ViewController.swift */; };
 		940A74271FB6D12B009D99B6 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74221FB6D12B009D99B6 /* MenuViewController.swift */; };
 		940A742A1FB6D13E009D99B6 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A74281FB6D13E009D99B6 /* MainModel.swift */; };
@@ -99,7 +99,7 @@
 		940A52B91FB8AE25002272D6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		940A740E1FB6CFD4009D99B6 /* Axis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Axis.swift; sourceTree = "<group>"; };
 		940A74101FB6CFD5009D99B6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		940A741F1FB6D12A009D99B6 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
+		940A741F1FB6D12A009D99B6 /* TESTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TESTViewController.swift; sourceTree = "<group>"; };
 		940A74201FB6D12A009D99B6 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		940A74221FB6D12B009D99B6 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		940A74281FB6D13E009D99B6 /* MainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 		940A741D1FB6D0CB009D99B6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				940A741F1FB6D12A009D99B6 /* TESTViewController.swift */,
 				940A74221FB6D12B009D99B6 /* MenuViewController.swift */,
-				940A741F1FB6D12A009D99B6 /* NewViewController.swift */,
 				940A74201FB6D12A009D99B6 /* ViewController.swift */,
 				9404D3CD1FBB53AA0078331D /* ViewController+Extension.swift */,
 				940A742F1FB6D155009D99B6 /* Views */,
@@ -523,7 +523,7 @@
 				940A742D1FB6D146009D99B6 /* UIView+Extension.swift in Sources */,
 				940A74271FB6D12B009D99B6 /* MenuViewController.swift in Sources */,
 				940A74251FB6D12B009D99B6 /* ViewController.swift in Sources */,
-				940A74241FB6D12B009D99B6 /* NewViewController.swift in Sources */,
+				940A74241FB6D12B009D99B6 /* TESTViewController.swift in Sources */,
 				940A743C1FB6D1EA009D99B6 /* CollectionViewVM.swift in Sources */,
 				940A742A1FB6D13E009D99B6 /* MainModel.swift in Sources */,
 				940254EF1FAB1B2C00402B7E /* Utilities.swift in Sources */,

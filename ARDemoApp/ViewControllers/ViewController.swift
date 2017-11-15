@@ -37,51 +37,22 @@ class ViewController: UIViewController {
   
   var focusSquare = FocusSquare()
   lazy var virtualObjectInteraction = VirtualObjectInteraction(sceneView: ARsceneView)
-  
-  /// Coordinates the loading and unloading of reference nodes for virtual objects.
   let virtualObjectLoader = VirtualObjectLoader()
-  
-  /// Marks if the AR experience is available for restart.
-  var isRestartAvailable = true
 
-  var virtualObject: ModelObject? {
-    didSet {
-      guard let model = virtualObject?.getModel() else { return }
-//      let model = setupBox()
-      guard let placeholder = placeholderNode else { return }
-      placeholder.clearChildNode()
-//      model.eulerAngles.x = .pi
-      print(model)
-//      placeholder.parent!.addChildNode(model)
-//      self.placeholderNode?.simdPosition = float3(planeAnchor.center.x, 0, planeAnchor.center.z)
-      mainVCVM.scene.rootNode.addChildNode(model)
-      guard let anchor = anchors.first else { return }
-//      model.simdPosition = float3(anchor.center.x, 0, anchor.center.z)
-      lastModel.removeFromParentNode()
-      lastModel = model
-    }
-  }
-  
+  /// A serial queue used to coordinate adding or removing nodes from the scene.
+  let updateQueue = DispatchQueue(label: "com.leapfrog.ARserialSceneKitQueue")
+
   var screenCenter: CGPoint {
     let bounds = ARsceneView.bounds
     return CGPoint(x: bounds.midX, y: bounds.midY)
   }
 
-  /// A serial queue used to coordinate adding or removing nodes from the scene.
-  let updateQueue = DispatchQueue(label: "com.leapfrog.ARserialSceneKitQueue")
-
-  func setupBox() -> SCNNode {
-    let box = SCNSphere(radius: 0.05)//SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0)
-    box.firstMaterial?.diffuse.contents = UIColor.red
-    let boxNode = SCNNode(geometry: box)
-    boxNode.position = SCNVector3(x: -0.025, y: -0.025, z: 0)
-    return boxNode
-  }
-  
+  // MARK:- VIEW LIFECYCLES
   override func viewDidLoad() {
     super.viewDidLoad()
     
     mainVCVM.configureScene(ARSceneView: ARsceneView, delegate: self)
+    setupCamera()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -177,21 +148,15 @@ class ViewController: UIViewController {
     buttonsHideShowAnimation(toShow: false, animationTime: 0.3, andDelay: 0.25)
     menuVC.modelSelection = { [weak self] model in
       print(model.displayName)
-//      self?.virtualObject = model
       menuVC.dismiss(animated: true, completion: nil)
       self?.showHideBlurOverlay(show: false)
       self?.buttonsHideShowAnimation(toShow: true, animationTime: 0.3, andDelay: 0.25)
       
-      
-      if let filePath = Bundle.main.url(forResource: model.model.modelsPath() + "/model", withExtension: "dae") {
-        let object = VirtualObject(url: filePath)
-        self?.virtualObjectLoader.loadVirtualObject(object!, loadedHandler: { loadedObject in
-          DispatchQueue.main.async {
-            //          self.hideObjectLoadingUI()
-            self?.placeVirtualObject(loadedObject)
-          }
-        })
-      }
+      self?.virtualObjectLoader.loadVirtualObject(model.virtualModel, loadedHandler: { loadedObject in
+        DispatchQueue.main.async {
+          self?.placeVirtualObject(loadedObject)
+        }
+      })
     }
   }
   
@@ -267,7 +232,6 @@ class ViewController: UIViewController {
     }
 
     isObjectVisible ? focusSquare.hide() : focusSquare.unhide()
-//    print(isObjectVisible)
     // We should always have a valid world position unless the sceen is just being initialized.
     guard let (worldPosition, planeAnchor, _) = ARsceneView.worldPosition(fromScreenPosition: screenCenter, objectPosition: focusSquare.lastPosition) else {
       updateQueue.async {

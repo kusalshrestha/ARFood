@@ -12,15 +12,15 @@ import SceneKit
 class ModelObject {
   
   var category: Category!
-  var model: ArtificialModel!
+  var rawModel: ArtificialModel!
+  var virtualModel: VirtualObject!
   var displayName: String!
-  var modelNode: SCNNode!
   var icon: String!
   var image: UIImage!
   var price: String!
   
   init(model: ArtificialModel) {
-    self.model = model
+    self.rawModel = model
     categorizeModels()
   }
   
@@ -29,7 +29,7 @@ class ModelObject {
   }
   
   func categorizeModels() {
-    switch model {
+    switch rawModel {
     case .aarquiteta:
       displayName = "Aarquiteta"
       category = .drinks
@@ -179,19 +179,22 @@ class ModelObject {
     case .some(_):
       break
     }
+    
+    guard let mainNode = rawModel.modelURL() else { return }
+    virtualModel = VirtualObject(url: mainNode)
   }
   
-  func getModel() -> SCNNode {
-    let modelScene = SCNScene(named: model.modelsPath() + "/model.dae")
-    guard let scene = modelScene else { return SCNNode() }
-    guard let modelNode = scene.rootNode.childNode(withName: "SketchUp", recursively: false) else { return SCNNode() }
-    self.modelNode = modelNode
-    return modelNode
-  }
+//  func getModel() -> SCNNode {
+//    let modelScene = SCNScene(named: model.modelsPath() + "/model.dae")
+//    guard let scene = modelScene else { return SCNNode() }
+//    guard let modelNode = scene.rootNode.childNode(withName: "SketchUp", recursively: false) else { return SCNNode() }
+//    self.modelNode = modelNode
+//    return modelNode
+//  }
   
   class func getAllModels() -> [ModelObject] {
     var models: [ModelObject] = []
-    
+
     models.append(ModelObject(model: .aarquiteta))
     models.append(ModelObject(model: .bierfles))
     models.append(ModelObject(model: .birthdayCake))
@@ -219,17 +222,9 @@ class ModelObject {
     
     return models
   }
-  
+    
   class func modelCategoryList() -> [Category] {
     return [.drinks, .cake, .noodlesSoup, .breakfast, .fastfood, .other]
-  }
-  
-  func adjustPoisiton(position: SCNVector3) {
-    
-  }
-  
-  func reScaleModel(scale: SCNVector3) {
-    
   }
   
   private class func getAllAvailableObjects(inFolder folderName: String, ofExtension fileExtension: String, andChildName name: String) -> [SCNNode] {
