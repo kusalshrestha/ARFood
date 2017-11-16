@@ -47,6 +47,7 @@
 		94A09E041FBC7FE300AE6D6E /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09E031FBC7FE300AE6D6E /* InitialViewController.swift */; };
 		94A09E061FBC86D200AE6D6E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09E051FBC86D200AE6D6E /* ProfileViewController.swift */; };
 		94A09E081FBC9B8700AE6D6E /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A09E071FBC9B8700AE6D6E /* SplitViewController.swift */; };
+		94C527AC1FBD490E00F5F995 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 94C527AB1FBD490D00F5F995 /* pizza.png */; };
 		94F44FD01FB4B95600653705 /* Giapponese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB71FB4B95200653705 /* Giapponese.jpg */; };
 		94F44FD11FB4B95600653705 /* Soup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB81FB4B95300653705 /* Soup.jpg */; };
 		94F44FD21FB4B95600653705 /* PotatoChips.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94F44FB91FB4B95300653705 /* PotatoChips.jpg */; };
@@ -138,6 +139,7 @@
 		94A09E031FBC7FE300AE6D6E /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		94A09E051FBC86D200AE6D6E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		94A09E071FBC9B8700AE6D6E /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		94C527AB1FBD490D00F5F995 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
 		94F44FB71FB4B95200653705 /* Giapponese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Giapponese.jpg; sourceTree = "<group>"; };
 		94F44FB81FB4B95300653705 /* Soup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Soup.jpg; sourceTree = "<group>"; };
 		94F44FB91FB4B95300653705 /* PotatoChips.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PotatoChips.jpg; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 				94F44FC21FB4B95400653705 /* Noodles.jpg */,
 				94F44FBE1FB4B95300653705 /* OskarBlues.jpg */,
 				94F44FCD1FB4B95600653705 /* PepperoniPizza.jpg */,
+				94C527AB1FBD490D00F5F995 /* pizza.png */,
 				94F44FB91FB4B95300653705 /* PotatoChips.jpg */,
 				94F44FB81FB4B95300653705 /* Soup.jpg */,
 				94F44FBB1FB4B95300653705 /* Sucos.jpg */,
@@ -492,6 +495,7 @@
 				94F44FE31FB4B95600653705 /* BirthdayCake.jpg in Resources */,
 				94F44FE11FB4B95600653705 /* CakePiece.jpg in Resources */,
 				94F44FD51FB4B95600653705 /* WeddingCake.jpg in Resources */,
+				94C527AC1FBD490E00F5F995 /* pizza.png in Resources */,
 				9480AD4E1F974D750019492F /* Assets.xcassets in Resources */,
 				94F44FE61FB4B95600653705 /* PepperoniPizza.jpg in Resources */,
 				94F44FE41FB4B95600653705 /* BreakFast.jpg in Resources */,

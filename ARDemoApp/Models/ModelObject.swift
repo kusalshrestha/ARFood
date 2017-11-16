@@ -174,6 +174,12 @@ class ModelObject {
       icon = ""
       image = #imageLiteral(resourceName: "WeddingCake.jpg")
       price = "$ 9.9"
+    case .pizza:
+      displayName = "Pizza"
+      category = .fastfood
+      icon = ""
+      image = #imageLiteral(resourceName: "pizza.png")
+      price = "$ 9.9"
     case .none:
       break
     case .some(_):
@@ -219,6 +225,7 @@ class ModelObject {
     models.append(ModelObject(model: .sucos))
     models.append(ModelObject(model: .weddingCake))
     models.append(ModelObject(model: .senzaTitolo))
+    models.append(ModelObject(model: .pizza))
     
     return models
   }

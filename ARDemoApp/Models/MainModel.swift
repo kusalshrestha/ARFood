@@ -31,7 +31,7 @@ enum Category {
 
 enum ArtificialModel {
   
-  case aarquiteta, bierfles, birthdayCake, blackforest, breakfast, burger, burgerFries, cakePiece, chineseNoodles, chocolateCake, clicquot, cocacola, fastFood, franksBeansDinner, giapponese, instantNodoles, jackDaniels, oskarBluesBeer, pepperoniPizza, potatoChips, senzaTitolo, soup, sucos, weddingCake
+  case aarquiteta, bierfles, birthdayCake, blackforest, breakfast, burger, burgerFries, cakePiece, chineseNoodles, chocolateCake, clicquot, cocacola, fastFood, franksBeansDinner, giapponese, instantNodoles, jackDaniels, oskarBluesBeer, pepperoniPizza, pizza, potatoChips, senzaTitolo, soup, sucos, weddingCake
   
   func modelsPath() -> String {
     switch self {
@@ -73,6 +73,8 @@ enum ArtificialModel {
       return "Food.scnassets/OskarBluesBeerCan"
     case .pepperoniPizza:
       return "Food.scnassets/PepperoniPizza"
+    case .pizza:
+      return "Food.scnassets/Pizza"
     case .potatoChips:
       return "Food.scnassets/PotatoChips"
     case .senzaTitolo:
