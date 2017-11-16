@@ -201,6 +201,7 @@ class ModelObject {
   class func getAllModels() -> [ModelObject] {
     var models: [ModelObject] = []
 
+    models.append(ModelObject(model: .pizza))
     models.append(ModelObject(model: .aarquiteta))
     models.append(ModelObject(model: .bierfles))
     models.append(ModelObject(model: .birthdayCake))
@@ -225,7 +226,6 @@ class ModelObject {
     models.append(ModelObject(model: .sucos))
     models.append(ModelObject(model: .weddingCake))
     models.append(ModelObject(model: .senzaTitolo))
-    models.append(ModelObject(model: .pizza))
     
     return models
   }
