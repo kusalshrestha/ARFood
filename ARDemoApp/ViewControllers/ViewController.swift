@@ -154,10 +154,10 @@ class ViewController: UIViewController {
   
   @IBAction func addButtonOnPress(_ sender: UIButton) {
     splitVC = UIViewController.instantiate(vc: SplitViewController.self)
-    buttonsHideShowAnimation(toShow: false, animationTime: 0.3, andDelay: 0.25)
     showHideBlurOverlay(show: true, completion: { [weak self] in
       self?.present((self?.splitVC)!, animated: true, completion: nil)
     })
+    buttonsHideShowAnimation(toShow: false, animationTime: 0.3, andDelay: 0.25)
 
     splitVC?.menuVC.delegate = self
     splitVC?.dismissViewCallback = closeSplitVC

@@ -27,9 +27,12 @@ class LoginViewController: UIViewController {
 extension LoginViewController: FBSDKLoginButtonDelegate {
   
   func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-    let vc = UIViewController.instantiate(vc: ViewController.self)
-    self.present(vc, animated: true) {
-      UIApplication.shared.keyWindow?.rootViewController = vc
+    if (result.token != nil) {
+      fbLoginButton.isHidden = true
+      let vc = UIViewController.instantiate(vc: ViewController.self)
+      self.present(vc, animated: true) {
+        UIApplication.shared.keyWindow?.rootViewController = vc
+      }
     }
   }
   
